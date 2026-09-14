@@ -10,6 +10,8 @@ void load_catalog(const char *filename, Catalog *catalog);
 // Carga los horarios y llena los grupos/schedules de cada curso ya cargado
 void load_schedules(const char *filename, Catalog *catalog);
 
+void load_record(const char *filename, Record *record);
+
 FILE* open_file_csv(const char *filename);
 
 void split_csv_line(char *line, char fields[][MAX_LEN], int max_fields, int *num_fields);
@@ -17,5 +19,9 @@ void split_csv_line(char *line, char fields[][MAX_LEN], int max_fields, int *num
 void load_study_plan(const char *filename, Catalog *catalog);
 
 void parse_codes(const char *raw, char destination[][MAX_CODE], int max_codes, int *num_codes);
+
+int find_course(Catalog *catalog, const char *code);
+
+int day_to_number(const char *day);
 
 #endif
