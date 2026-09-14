@@ -14,4 +14,7 @@
 #define MAX_COURSES_IN_CATALOG 100
 #define MAX_COMPLETED_COURSES 60
 
+#define MAX_LEN 100 
+#define MAX_COLS 13
+
 #endif
