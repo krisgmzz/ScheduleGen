@@ -3,6 +3,7 @@
 
 #include "structs.h"
 #include "constants.h"
+#include <stdio.h>
 
 // Carga el plan de estudios y llena el catálogo
 void load_catalog(const char *filename, Catalog *catalog);
@@ -23,5 +24,7 @@ void parse_codes(const char *raw, char destination[][MAX_CODE], int max_codes, i
 int find_course(Catalog *catalog, const char *code);
 
 int day_to_number(const char *day);
+
+void parse_schedule_field(const char *raw, Group *group);
 
 #endif

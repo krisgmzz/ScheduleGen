@@ -147,7 +147,7 @@ int find_course(Catalog *catalog, const char *code) { // Devuelve el índice en 
     return -1;
 }
 
-void load_schedule(const char *filename, Catalog *catalog) {
+void load_schedules(const char *filename, Catalog *catalog) {
     FILE *schedules = open_file_csv(filename);
     if (schedules == NULL) {
         fprintf(stderr, "No se pudo abrir el archivo %s\n", filename);
@@ -163,7 +163,6 @@ void load_schedule(const char *filename, Catalog *catalog) {
     int codigo_index = -1;
     int grupo_index = -1;
     int horario_index = -1;
-    int aula_index = -1;
 
     if (fgets(line, sizeof(line), schedules) == NULL) {
         fprintf(stderr, "Error al leer el archivo %s\n", filename);
@@ -179,8 +178,6 @@ void load_schedule(const char *filename, Catalog *catalog) {
             grupo_index = i;
         } else if (strcmp(fields[i], "horario") == 0) {
             horario_index = i;
-        } else if (strcmp(fields[i], "aula") == 0) {
-            aula_index = i;
         }
     }
     if (sede_index == -1 || codigo_index == -1 || grupo_index == -1 || horario_index == -1) {
@@ -211,7 +208,7 @@ void load_schedule(const char *filename, Catalog *catalog) {
         nuevo_grupo->group_number = atoi(fields[grupo_index]);  // índice 8 = grupo
         nuevo_grupo->schedule_clash = false;
 
-        parse_horario_field(fields[horario_index], nuevo_grupo, fields[aula_index]);
+        parse_schedule_field(fields[horario_index], nuevo_grupo);
 
         catalog->courses[idx].num_groups++;
     }
@@ -230,7 +227,7 @@ int day_to_number(const char *day) {
     return -1;
 }
 
-void parse_schedule_field(const char *raw, Group *group, char* room) {
+void parse_schedule_field(const char *raw, Group *group) {
     group->num_schedules = 0;
 
     char copy[MAX_LEN];
@@ -267,7 +264,6 @@ void parse_schedule_field(const char *raw, Group *group, char* room) {
         new_schedule->day = day;
         new_schedule->begin_time = h1 * 60 + m1;
         new_schedule->end_time = h2 * 60 + m2;
-        new_schedule->aula[0] = room[0];
 
         group->num_schedules++;
         token = strtok(NULL, " ");
