@@ -1,5 +1,6 @@
 #include "structs.h"
 #include "loader.h"
+#include "writer.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -69,9 +70,10 @@ int main(int argc, char *argv[]) {
     imprimir_catalogo(&catalog);
     imprimir_record(&record);
 
-    // Procesar requisitos y correquisitos (tus compañeros)
-    // Procesar choques de horario (tus compañeros)
-    // Generar el archivo final JSON (vos, siguiente paso)
+    // Procesar requisitos y correquisitos 
+    // Procesar choques de horario 
+
+    export_catalog("Catalogo.csv", &catalog);
 
     return 0;
 }
