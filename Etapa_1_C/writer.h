@@ -7,5 +7,4 @@
 
 void export_catalog(const char *filename, Catalog *catalog);
 
-
 #endif

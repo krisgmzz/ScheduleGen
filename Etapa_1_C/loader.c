@@ -3,7 +3,33 @@
 #include <string.h>
 #include <stdlib.h>
 
+void parse_codes(const char *str, char destination[][MAX_CODE], int max_codes, int *num_codes) {
+    *num_codes = 0;
+    if (strcmp(str, "No hay") == 0) {
+        return;
+    }
+    char copy[MAX_LEN];
+    strncpy(copy, str, MAX_LEN - 1);
+    copy[MAX_LEN - 1] = '\0';
 
+    char *token = strtok(copy, ",");
+    while (token != NULL && *num_codes < max_codes) {
+        // Saltar posibles espacios al inicio del token
+        while (*token == ' ') {
+            token++;
+        }
+
+        strncpy(destination[*num_codes], token, MAX_CODE - 1);
+        destination[*num_codes][MAX_CODE - 1] = '\0';
+        (*num_codes)++;
+
+        token = strtok(NULL, ",");
+    }
+    if (token != NULL) {
+        fprintf(stderr, "Advertencia: se excedió el máximo de cursos permitidos (%d) en \"%s\"\n", max_codes, str);
+        exit(EXIT_FAILURE);
+    }
+}
 
 FILE* open_file_csv(const char *filename) {
     FILE *file = fopen(filename, "r");
@@ -110,34 +136,6 @@ void load_study_plan(const char *filename, Catalog *catalog) {
     return;
 }
 
-void parse_codes(const char *str, char destination[][MAX_CODE], int max_codes, int *num_codes) {
-    *num_codes = 0;
-    if (strcmp(str, "No hay") == 0) {
-        return;
-    }
-    char copy[MAX_LEN];
-    strncpy(copy, str, MAX_LEN - 1);
-    copy[MAX_LEN - 1] = '\0';
-
-    char *token = strtok(copy, ",");
-    while (token != NULL && *num_codes < max_codes) {
-        // Saltar posibles espacios al inicio del token
-        while (*token == ' ') {
-            token++;
-        }
-
-        strncpy(destination[*num_codes], token, MAX_CODE - 1);
-        destination[*num_codes][MAX_CODE - 1] = '\0';
-        (*num_codes)++;
-
-        token = strtok(NULL, ",");
-    }
-    if (token != NULL) {
-        fprintf(stderr, "Advertencia: se excedió el máximo de cursos permitidos (%d) en \"%s\"\n", max_codes, str);
-        exit(EXIT_FAILURE);
-    }
-}
-
 int find_course(Catalog *catalog, const char *code) { // Devuelve el índice en catalog->courses[] si lo encuentra, o -1 si no existe.
     for (int i = 0; i < catalog->num_courses; i++) {
         if (strcmp(catalog->courses[i].code, code) == 0) {
@@ -145,6 +143,60 @@ int find_course(Catalog *catalog, const char *code) { // Devuelve el índice en 
         }
     }
     return -1;
+}
+
+int day_to_number(const char *day) {
+    if (strncmp(day, "LUN", 3) == 0) return 0;
+    if (strncmp(day, "MAR", 3) == 0) return 1;
+    if (strncmp(day, "MIE", 3) == 0) return 2;
+    if (strncmp(day, "JUE", 3) == 0) return 3;
+    if (strncmp(day, "VIE", 3) == 0) return 4;
+    if (strncmp(day, "SAB", 3) == 0) return 5;
+    if (strncmp(day, "DOM", 3) == 0) return 6;
+    return -1;
+}
+
+void parse_schedule_field(const char *raw, Group *group) {
+    group->num_schedules = 0;
+
+    char copy[MAX_LEN];
+    strncpy(copy, raw, MAX_LEN - 1);
+    copy[MAX_LEN - 1] = '\0';
+
+    char *token = strtok(copy, " ");
+    while (token != NULL) {
+        if (group->num_schedules >= MAX_SCHEDULES_PER_GROUP) {
+            fprintf(stderr, "Advertencia: se excedió el máximo de horarios por grupo (%d) en \"%s\"\n",
+                    MAX_SCHEDULES_PER_GROUP, raw);
+            exit(EXIT_FAILURE);
+        }
+
+        char *corchete = strchr(token, '[');
+        if (corchete == NULL) {
+            fprintf(stderr, "Formato de horario inválido (falta '['): \"%s\"\n", token);
+            exit(EXIT_FAILURE);
+        }
+
+        int day = day_to_number(token);
+        if (day == -1) {
+            fprintf(stderr, "Día no reconocido en horario: \"%s\"\n", token);
+            exit(EXIT_FAILURE);
+        }
+
+        int h1, m1, h2, m2;
+        if (sscanf(corchete, "[%d:%d-%d:%d]", &h1, &m1, &h2, &m2) != 4) {
+            fprintf(stderr, "Formato de horas inválido: \"%s\"\n", token);
+            exit(EXIT_FAILURE);
+        }
+
+        Schedule *new_schedule = &group->schedules[group->num_schedules];
+        new_schedule->day = day;
+        new_schedule->begin_time = h1 * 60 + m1;
+        new_schedule->end_time = h2 * 60 + m2;
+
+        group->num_schedules++;
+        token = strtok(NULL, " ");
+    }
 }
 
 void load_schedules(const char *filename, Catalog *catalog) {
@@ -214,60 +266,6 @@ void load_schedules(const char *filename, Catalog *catalog) {
     }
 
     fclose(schedules);
-}
-
-int day_to_number(const char *day) {
-    if (strncmp(day, "LUN", 3) == 0) return 0;
-    if (strncmp(day, "MAR", 3) == 0) return 1;
-    if (strncmp(day, "MIE", 3) == 0) return 2;
-    if (strncmp(day, "JUE", 3) == 0) return 3;
-    if (strncmp(day, "VIE", 3) == 0) return 4;
-    if (strncmp(day, "SAB", 3) == 0) return 5;
-    if (strncmp(day, "DOM", 3) == 0) return 6;
-    return -1;
-}
-
-void parse_schedule_field(const char *raw, Group *group) {
-    group->num_schedules = 0;
-
-    char copy[MAX_LEN];
-    strncpy(copy, raw, MAX_LEN - 1);
-    copy[MAX_LEN - 1] = '\0';
-
-    char *token = strtok(copy, " ");
-    while (token != NULL) {
-        if (group->num_schedules >= MAX_SCHEDULES_PER_GROUP) {
-            fprintf(stderr, "Advertencia: se excedió el máximo de horarios por grupo (%d) en \"%s\"\n",
-                    MAX_SCHEDULES_PER_GROUP, raw);
-            exit(EXIT_FAILURE);
-        }
-
-        char *corchete = strchr(token, '[');
-        if (corchete == NULL) {
-            fprintf(stderr, "Formato de horario inválido (falta '['): \"%s\"\n", token);
-            exit(EXIT_FAILURE);
-        }
-
-        int day = day_to_number(token);
-        if (day == -1) {
-            fprintf(stderr, "Día no reconocido en horario: \"%s\"\n", token);
-            exit(EXIT_FAILURE);
-        }
-
-        int h1, m1, h2, m2;
-        if (sscanf(corchete, "[%d:%d-%d:%d]", &h1, &m1, &h2, &m2) != 4) {
-            fprintf(stderr, "Formato de horas inválido: \"%s\"\n", token);
-            exit(EXIT_FAILURE);
-        }
-
-        Schedule *new_schedule = &group->schedules[group->num_schedules];
-        new_schedule->day = day;
-        new_schedule->begin_time = h1 * 60 + m1;
-        new_schedule->end_time = h2 * 60 + m2;
-
-        group->num_schedules++;
-        token = strtok(NULL, " ");
-    }
 }
 
 bool existent_code(Record* record, const char* code){

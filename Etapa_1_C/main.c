@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
     // Procesar requisitos y correquisitos 
     // Procesar choques de horario 
 
-    export_catalog("Catalogo.csv", &catalog);
+    export_catalog("Catalogo.json", &catalog);
 
     return 0;
 }
