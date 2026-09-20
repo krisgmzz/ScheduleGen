@@ -88,7 +88,7 @@ void load_study_plan(const char *filename, Catalog *catalog) {
     int credits_index = -1; // índice del campo de créditos en el CSV
 
     // Obtener campos de la primera línea para verificar el formato
-    if(fgets(line, sizeof(line), study_plan) == NULL) {+-
+    if(fgets(line, sizeof(line), study_plan) == NULL) {
         fprintf(stderr, "Error al leer el archivo %s\n", filename);
         exit(EXIT_FAILURE);
     }

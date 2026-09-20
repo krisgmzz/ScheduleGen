@@ -1,6 +1,7 @@
 #include "structs.h"
 #include "loader.h"
 #include "writer.h"
+#include "collision.h"
 #include <stdio.h>
 #include <stdlib.h>
 

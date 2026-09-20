@@ -1,5 +1,5 @@
 #include "collision.h"
-
+#include <stdio.h>
 bool schedules_clash(const Schedule *first, const Schedule *second) {
     if (first->day != second->day) {
         return false;
@@ -57,6 +57,16 @@ void detect_schedule_clashes(Catalog *catalog) {
                         group_b->schedule_clash = true;
                         course_a->schedule_clash = true;
                         course_b->schedule_clash = true;
+
+
+			//Temporal para pruebas 
+			printf(
+    				"Choque: %s grupo %d con %s grupo %d\n",
+    				course_a->code,
+    				group_a->group_number,
+    				course_b->code,
+    				group_b->group_number
+			);
                     }
                 }
             }
