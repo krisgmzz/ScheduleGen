@@ -72,6 +72,7 @@ int main(int argc, char *argv[]) {
 
     // Procesar requisitos y correquisitos 
 
+
     // Procesar choques de horario 
     detect_schedule_clashes(&catalog);
 
