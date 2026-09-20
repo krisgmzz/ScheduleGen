@@ -71,9 +71,11 @@ int main(int argc, char *argv[]) {
     imprimir_record(&record);
 
     // Procesar requisitos y correquisitos 
-    // Procesar choques de horario 
 
-    export_catalog("Catalogo.csv", &catalog);
+    // Procesar choques de horario 
+    detect_schedule_clashes(&catalog);
+
+    export_catalog("Catalogo.json", &catalog);
 
     return 0;
 }
