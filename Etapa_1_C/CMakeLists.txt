@@ -5,4 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(include)
 
-add_executable(main main.c loader.c writer.c collision.c)
+add_executable(main main.c loader.c writer.c collision.c prereq.validator.c)

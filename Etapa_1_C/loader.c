@@ -193,6 +193,7 @@ void parse_schedule_field(const char *raw, Group *group) {
         new_schedule->day = day;
         new_schedule->begin_time = h1 * 60 + m1;
         new_schedule->end_time = h2 * 60 + m2;
+        snprintf(new_schedule->aula, sizeof(new_schedule->aula), "N/A");
 
         group->num_schedules++;
         token = strtok(NULL, " ");

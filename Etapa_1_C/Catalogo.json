@@ -1,0 +1,1907 @@
+{
+    "cursos": [
+        {
+            "codigo": "CI0205",
+            "nombre": "prueba avanzada inglés",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "MA0101",
+            "nombre": "matemática general",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1070},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1070},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 740},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 960, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1101",
+            "nombre": "introducción a la programación",
+            "creditos": 3,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1104",
+            "nombre": "fundamentos de sistemas computacionales",
+            "creditos": 3,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "CE1101"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "MA1102",
+            "nombre": "cálculo diferencial e integral",
+            "creditos": 4,
+            "prerrequisitos": [
+                "MA0101"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 620},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1130},
+                        {"dia": 4, "inicio": 960, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 620},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 21,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 20,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1250},
+                        {"dia": 4, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 740},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 960, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1190},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 740},
+                        {"dia": 4, "inicio": 630, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 16,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1070},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 630, "fin": 740},
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1070},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 630, "fin": 740},
+                        {"dia": 4, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1190},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 900, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 22,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1130},
+                        {"dia": 4, "inicio": 960, "fin": 1070}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "MA1403",
+            "nombre": "matemática discreta",
+            "creditos": 4,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "QU1102",
+            "nombre": "laboratorio de química básica i",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "QU1106"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "QU1106",
+            "nombre": "química básica i",
+            "creditos": 3,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "QU1102"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "SE1100",
+            "nombre": "actividad cultural i",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "SE1200",
+            "nombre": "actividad deportiva i",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CE1103",
+            "nombre": "algoritmos y estructuras de datos i",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1101",
+                "CE1104",
+                "MA1403"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1105",
+            "nombre": "principios de modelado en ingeniería",
+            "creditos": 3,
+            "prerrequisitos": [
+                "CE1104"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1140, "fin": 1250},
+                        {"dia": 1, "inicio": 1140, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CI1407",
+            "nombre": "habilidades de comunicación en ingeniería",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CS1502",
+            "nombre": "introducción a la técnica ciencia y tecnología",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "FI1101",
+            "nombre": "física general i",
+            "creditos": 3,
+            "prerrequisitos": [
+                "MA1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 20,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "FI1201",
+            "nombre": "laboratorio física general i",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "FI1101"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 27,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 23,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 24,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 22,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 16,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 26,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 29,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 25,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "MA1103",
+            "nombre": "cálculo y álgebra lineal",
+            "creditos": 4,
+            "prerrequisitos": [
+                "MA1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 960, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 16,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1190},
+                        {"dia": 4, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1070},
+                        {"dia": 4, "inicio": 960, "fin": 1070}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "SE1400",
+            "nombre": "actividad cultural-deportiva",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CE2103",
+            "nombre": "algoritmos y estructuras de datos II",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1103",
+                "CE1105"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CS2101",
+            "nombre": "ambiente humano",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": false,
+                    "horarios": [
+                        {"dia": 0, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1080, "fin": 1250}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "EL2113",
+            "nombre": "circuitos eléctricos en corriente continua",
+            "creditos": 4,
+            "prerrequisitos": [
+                "FI1101",
+                "MA1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 560},
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "FH1000",
+            "nombre": "centros de formación humanística",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "FI1102",
+            "nombre": "física general II",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI1101"
+            ],
+            "correquisitos": [
+                "MA1102"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "FI1202",
+            "nombre": "laboratorio física general II",
+            "creditos": 1,
+            "prerrequisitos": [
+                "FI1201"
+            ],
+            "correquisitos": [
+                "FI1102"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "MA2104",
+            "nombre": "cálculo superior",
+            "creditos": 4,
+            "prerrequisitos": [
+                "MA1103"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1190},
+                        {"dia": 4, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1106",
+            "nombre": "paradigmas de programación",
+            "creditos": 3,
+            "prerrequisitos": [
+                "CE2103"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE2201",
+            "nombre": "laboratorio de circuitos eléctricos",
+            "creditos": 1,
+            "prerrequisitos": [
+                "FI1202"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "EL2114",
+            "nombre": "circuitos eléctricos en corriente alterna",
+            "creditos": 4,
+            "prerrequisitos": [
+                "EL2113"
+            ],
+            "correquisitos": [
+                "EL2207"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "EL2207",
+            "nombre": "elementos activos",
+            "creditos": 4,
+            "prerrequisitos": [
+                "EL2113"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "PI2609",
+            "nombre": "probabilidad y estadística",
+            "creditos": 2,
+            "prerrequisitos": [
+                "MA2104"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 620}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "SO4604",
+            "nombre": "seguridad y salud ocupacional",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                }
+            ]
+        }
+    ]
+}

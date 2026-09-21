@@ -2,6 +2,7 @@
 #include "loader.h"
 #include "writer.h"
 #include "collision.h"
+#include "prereq.validator.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -72,7 +73,7 @@ int main(int argc, char *argv[]) {
     imprimir_record(&record);
 
     // Procesar requisitos y correquisitos 
-
+    validate_catalog_requirements(&catalog, &record);
 
     // Procesar choques de horario 
     detect_schedule_clashes(&catalog);
