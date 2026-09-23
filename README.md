@@ -317,6 +317,81 @@ Elegimos JSON como formato de salida porque la estructura de los datos es natura
 
 Se decidió omitir el campo `aula` del `Schedule` en el archivo de salida, a pesar de estar presente en la estructura interna (`structs.h`), ya que no forma parte de los campos mínimos solicitados en el enunciado y no fue capturado consistentemente en el proceso de recolección de datos.
 ---
-# 3. Estructuras de datos desarrolladas  
+# 3. Estructuras de datos desarrolladas
+
+Para representar el problema decidimos organizar la información en varias capas, primero está cada horario puntual, luego cada grupo que agrupa esos horarios, después el curso completo con sus requisitos y por último el catálogo general del plan de estudios, esta forma especifíca de estructurar los datos hace que el programa sea más claro y que cada parte del código se encargue de una cosa puntualmente, sin mezclar mucho las responsabilidades.
+
+## 3.1 Schedule: el bloque básico del horario
+
+La estructura más pequeña es `Schedule` y es la que representa una franja horaria concreta dentro de un grupo. Aquí guardamos:
+
+- `day`: el día de la semana.
+- `begin_time` y `end_time`: la hora de inicio y finalización, convertidas a minutos desde la medianoche.
+- `aula`: el lugar donde se imparte la clase.
+
+Esto nos sirve mucho porque cuando convertimos las horas a números, la comparación entre horarios queda mucho más simple, ya que en vez de estar revisando cadenas como "15:00" y "17:50", el programa compara enteros directamente para saber si hay solapamiento.
+
+## 3.2 Group: varios horarios para un mismo grupo
+
+Luego tenemos `Group`, que agrupa todas las franjas horarias de un mismo grupo. Un curso puede tener varios grupos, y cada grupo tiene su propia lista de horarios.
+
+Dentro de esta estructura se guarda:
+
+- el número del grupo.
+- cuántos horarios tiene.
+- si ese grupo presenta choque con otro.
+- la lista de horarios asociados.
+
+Es decir, `Group` es la representación de todas las clases que ofrece este grupo en particular. Aquí ya se empieza a ver cómo se modela la realidad del problema: cada curso no es solo un código, sino una oferta académica con varias opciones de horario.
+
+## 3.3 Curso: la materia con sus requisitos y grupos
+
+La estructura `Curso` es la más importante del sistema, porque representa la materia completa. 
+Aquí se guarda la información que define al curso:
+
+- código.
+- nombre.
+- créditos.
+- cantidad de grupos disponibles.
+- lista de grupos.
+- prerrequisitos.
+- correquisitos.
+- dos banderas calculadas: si tiene choque de horario y si el estudiante puede matricularlo.
+
+Esto hace que cada curso sea una entidad completa y propia. No solo conoce sus datos básicos,pero también si cumple con las condiciones académicas y si su oferta horaria es viable.
+
+## 3.4 Catalog: el conjunto completo de cursos
+
+`Catalog` es la estructura que reúne todos los cursos del plan de estudios. Tiene la cantidad total de cursos y un arreglo con ellos, es como la vista global del problema.
+
+Con esta estructura el programa puede recorrer todo el catálogo para:
+
+- revisar requisitos.
+- detectar choques de horario.
+- y generar el JSON final con la información procesada.
+
+Es como tener el plan completo del estudiante en una sola estructura para poder analizarlo de manera ordenada.
+
+## 3.5 Record: el historial del estudiante
+
+Por otro lado, `Record` guarda los cursos aprobados por el estudiante. Esto es lo que permite validar si una materia realmente puede ser elegida, según lo que ya ha cursado.
+
+En otras palabras, `Record` es la memoria académica del estudiante y sirve como base para decidir si cumple con los prerrequisitos y correquisitos.
+
+## 3.6 Cómo encajan todas estas estructuras
+
+La relación entre todo esto es bastante directa:
+
+1. `Schedule` representa un horario puntual.
+2. `Group` agrupa varios horarios de un grupo.
+3. `Curso` reúne la información del curso y sus grupos.
+4. `Catalog` reúne todos los cursos.
+5. `Record` representa el historial académico del estudiante.
+
+Y esta organización es útil porque cada parte del programa trabaja con la estructura adecuada, primero que todo los horarios se comparan para detectar choques, los cursos se validan según requisitos y el catálogo se recorre para obtener el resultado final. No hay una mezcla enorme de información ni una lógica dispersa por todos lados.
+
+En resumen, el diseño busca que cada estructura represente bien una parte del problema sin complicar demasiado el código. Eso hace que el proyecto sea más mantenible y más fácil de extender cuando se necesite seguir desarrollando en la siguiente etapa.
+
+---
 
 
