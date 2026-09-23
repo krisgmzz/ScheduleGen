@@ -321,3 +321,51 @@ void load_record(const char *filename, Record *record) {
 
     fclose(file);
 }
+
+bool load_selected_enrollment(const char *filename, char selected_courses[][MAX_CODE], int *num_selected_courses) {
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        *num_selected_courses = 0;
+        return false;
+    }
+
+    char line[1024];
+    char fields[1][MAX_LEN];
+    int num_cols = 1;
+    *num_selected_courses = 0;
+
+    if (fgets(line, sizeof(line), file) == NULL) {
+        fprintf(stderr, "Error al leer el archivo %s\n", filename);
+        fclose(file);
+        exit(EXIT_FAILURE);
+    }
+
+    split_csv_line(line, fields, 1, &num_cols);
+    if (num_cols != 1 || strcmp(fields[0], "codigos_matricula") != 0) {
+        fprintf(stderr, "El archivo %s no tiene el formato esperado\n", filename);
+        fclose(file);
+        exit(EXIT_FAILURE);
+    }
+
+    while (fgets(line, sizeof(line), file) != NULL) {
+        split_csv_line(line, fields, 1, &num_cols);
+        if (num_cols != 1) {
+            fprintf(stderr, "Formato de línea incorrecto en %s: se esperaba un solo campo\n", filename);
+            fclose(file);
+            exit(EXIT_FAILURE);
+        }
+
+        if (*num_selected_courses >= MAX_COMPLETED_COURSES) {
+            fprintf(stderr, "Número de cursos en la matrícula excede el máximo permitido (%d)\n", MAX_COMPLETED_COURSES);
+            fclose(file);
+            exit(EXIT_FAILURE);
+        }
+
+        strncpy(selected_courses[*num_selected_courses], fields[0], MAX_CODE - 1);
+        selected_courses[*num_selected_courses][MAX_CODE - 1] = '\0';
+        (*num_selected_courses)++;
+    }
+
+    fclose(file);
+    return true;
+}

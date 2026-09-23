@@ -51,31 +51,41 @@ int main(int argc, char *argv[]) {
     const char *plan_file = "PlanEstudios.csv";
     const char *horarios_file = "Horarios.csv";
     const char *record_file = "Aprobados.csv";
+    const char *selected_enrollment_file = "MatriculaSeleccionada.csv";
 
     if (argc == 4) {
         plan_file = argv[1];
         horarios_file = argv[2];
         record_file = argv[3];
+    } else if (argc == 5) {
+        plan_file = argv[1];
+        horarios_file = argv[2];
+        record_file = argv[3];
+        selected_enrollment_file = argv[4];
     } else if (argc != 1) {
-        fprintf(stderr, "Uso: %s [plan.csv horarios.csv aprobados.csv]\n", argv[0]);
+        fprintf(stderr, "Uso: %s [plan.csv horarios.csv aprobados.csv [matricula.csv]]\n", argv[0]);
         fprintf(stderr, "Sin argumentos, se usan los nombres por defecto.\n");
         exit(EXIT_FAILURE);
     }
 
     Record record;
     Catalog catalog;
+    char selected_courses[MAX_COMPLETED_COURSES][MAX_CODE];
+    int num_selected_courses = 0;
 
     load_study_plan(plan_file, &catalog);
     load_schedules(horarios_file, &catalog);
     load_record(record_file, &record);
+    load_selected_enrollment(selected_enrollment_file, selected_courses, &num_selected_courses);
 
     imprimir_catalogo(&catalog);
     imprimir_record(&record);
 
     // Procesar requisitos y correquisitos 
-    validate_catalog_requirements(&catalog, &record);
+    validate_selected_enrollment(&catalog, &record, selected_courses, num_selected_courses);
+    validate_catalog_requirements(&catalog, &record, selected_courses, num_selected_courses);
 
-    // Procesar choques de horario 
+    // Procesar choques de horario
     detect_schedule_clashes(&catalog);
 
     export_catalog("Catalogo.json", &catalog);
