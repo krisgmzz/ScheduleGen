@@ -4,6 +4,7 @@
 //Tamaños de cadenas
 #define MAX_CODE 12 //Codigo de curso
 #define MAX_NAME 100 //Nombre de curso
+#define MAX_CAREER 100 //Nombre de la carrera
 #define MAX_ROOM 5 //Numero de aula
 
 //Tamaños de arreglos
