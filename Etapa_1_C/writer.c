@@ -68,6 +68,9 @@ void write_curso(FILE *file, Curso *curso, int indent) {
     write_indent(file, indent + 1);
     fprintf(file, "\"nombre\": \"%s\",\n", curso->name);
 
+    write_indent(file, indent +1);
+    fprintf(file, "\"carrera\": \"%s\",\n", curso->career);
+
     write_indent(file, indent + 1);
     fprintf(file, "\"creditos\": %d,\n", curso->credits);
 

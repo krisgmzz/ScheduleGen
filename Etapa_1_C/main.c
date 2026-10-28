@@ -68,8 +68,8 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    Record record;
-    Catalog catalog;
+    Record record = {0};
+    Catalog catalog = {0};
     char selected_courses[MAX_COMPLETED_COURSES][MAX_CODE];
     int num_selected_courses = 0;
 
