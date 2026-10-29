@@ -1,0 +1,7 @@
+{
+  "intereses": [
+    { "codigo": "CE1103", "grupos": [2, 3] }
+  ],
+  "creditos_minimos": 12,
+  "creditos_maximos": 18
+}

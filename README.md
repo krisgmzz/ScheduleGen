@@ -316,6 +316,8 @@ contrato de formato que habíamos definido:
 Elegimos JSON como formato de salida porque la estructura de los datos es naturalmente jerárquica: un curso contiene una lista de grupos, y cada grupo contiene una lista de horarios. JSON representa esta relación de forma directa mediante objetos y arreglos anidados, mientras que un formato plano como CSV requeriría aplanar esta jerarquía (por ejemplo, una fila por combinación curso-grupo-horario), complicando su reconstrucción en la siguiente etapa del proyecto (Racket).
 
 Se decidió omitir el campo `aula` del `Schedule` en el archivo de salida, a pesar de estar presente en la estructura interna (`structs.h`), ya que no forma parte de los campos mínimos solicitados en el enunciado y no fue capturado consistentemente en el proceso de recolección de datos.
+
+Para probar la Etapa 2, `Etapa_2/Preferencias.json` contiene preferencias de ejemplo y debe ajustarse a los datos del estudiante. `Etapa_2/Combinaciones.json` es un archivo generado por el programa y no se versiona.
 ---
 # 3. Estructuras de datos desarrolladas
 

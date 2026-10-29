@@ -1,27 +1,31 @@
 #lang racket
 
-;;ajusten los nombres a los archivos reales de cada uno 
 (require "io.rkt"
-         "generador.rkt"
-         "filtro.rkt")
+         "generator.rkt"
+         "clash.rkt"
+         "filtro.rkt"
+         racket/runtime-path)
+
+(define-runtime-path catalogo-path "../Etapa_1_C/Catalogo.json")
+(define-runtime-path preferencias-path "Preferencias.json")
+(define-runtime-path salida-path "Combinaciones.json")
 
 ;;leer json generado en C y convertirlo en un Catalog
 (define catalogo
-  (load-catalog "../Etapa_1_C/Catalogo.json"))
+  (load-catalog catalogo-path))
 
-;;leer preferencias del estudiante: cursos, grupos, créditos deseados
+;; Las preferencias se leen, pero en esta etapa solo se usan los créditos.
 (define preferencias
-  (load-preferences "Preferencias.json"))
+  (load-preferences preferencias-path))
 
-;;llamar al generador para obtener combinaciones 
+;; Generar combinaciones sin choques y conservar solo las del rango de créditos.
 (define combinaciones
-  (generar-combinaciones catalogo preferencias))
+  (generate-combinations catalogo groups-clash?))
 
-;;filtrar combinaciones
 (define combinaciones-validas
-  (filtrar-combinaciones combinaciones preferencias))
+  (filter-combinations combinaciones preferencias))
 
 ;;escribir combinaciones resultantes en un json 
 (export-combinations
- "Combinaciones.json"
+ salida-path
  combinaciones-validas)
