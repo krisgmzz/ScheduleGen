@@ -377,79 +377,104 @@ Finalmente, JSON facilita la comunicación con la siguiente etapa desarrollada e
 ---
 # 3. Estructuras de datos desarrolladas
 
-Para representar el problema decidimos organizar la información en varias capas, primero está cada horario puntual, luego cada grupo que agrupa esos horarios, después el curso completo con sus requisitos y por último el catálogo general del plan de estudios, esta forma especifíca de estructurar los datos hace que el programa sea más claro y que cada parte del código se encargue de una cosa puntualmente, sin mezclar mucho las responsabilidades.
+Para esta etapa se definieron las estructuras de datos en `types.rkt`, utilizando Typed Racket. Todas son inmutables, por lo que no se utiliza `#:mutable` ni `set!`. Cuando es necesario modificar algún dato, se crea una nueva instancia de la estructura. Por ejemplo, esto se utiliza al reducir los grupos disponibles de un curso mediante `struct-copy`.
 
-## 3.1 Schedule: el bloque básico del horario
+Los nombres de las estructuras y sus campos están en inglés, mientras que las claves de los archivos JSON se mantienen en español. La conversión entre ambos se realiza desde `io.rkt`.
 
-La estructura más pequeña es `Schedule` y es la que representa una franja horaria concreta dentro de un grupo. Aquí guardamos:
+### Flujo de los datos
 
-- `day`: el día de la semana.
-- `begin_time` y `end_time`: la hora de inicio y finalización, convertidas a minutos desde la medianoche.
-- `aula`: el lugar donde se imparte la clase.
+```text
+Catalogo.json ──► Catalog ──► Catalog reducido ──► CombinationStream ──► CombinationStream ──► Combinaciones.json
+Preferencias.json ─► Preferences   
+```
 
-Esto nos sirve mucho porque cuando convertimos las horas a números, la comparación entre horarios queda mucho más simple, ya que en vez de estar revisando cadenas como "15:00" y "17:50", el programa compara enteros directamente para saber si hay solapamiento.
+### Catálogo
 
-## 3.2 Group: varios horarios para un mismo grupo
+El catálogo utiliza estructuras similares a las que se desarrollaron en la primera etapa en C. La principal diferencia es que los arreglos con contadores, como `schedules[]` y `num_schedules`, se sustituyeron por listas, ya que en Racket estas permiten manejar los elementos sin tener que llevar un contador por separado.
 
-Luego tenemos `Group`, que agrupa todas las franjas horarias de un mismo grupo. Un curso puede tener varios grupos, y cada grupo tiene su propia lista de horarios.
+| Struct | Campos | Descripción |
+|---|---|---|
+| `Schedule` | `day`, `begin-time`, `end-time` | Representa el horario de un grupo. Los días van de 0 (lunes) a 6 (domingo), y las horas se guardan como minutos desde la medianoche. |
+| `Group` | `number`, `schedule-clash`, `schedules` | Contiene el número del grupo, sus horarios y un indicador de choque que viene calculado desde C. |
+| `Course` | `code`, `name`, `credits`, `prerequisites`, `corequisites`, `schedule-clash`, `can-enroll`, `career`, `groups` | Almacena la información de cada curso. Se agregó el campo `career` para identificar a cuál de las dos carreras pertenece. |
+| `Catalog` | `courses` | Contiene una lista de cursos. Se utiliza tanto para el catálogo original como para el catálogo reducido que se obtiene durante el filtrado. |
 
-Dentro de esta estructura se guarda:
+Se decidió utilizar el mismo tipo `Catalog` para ambas versiones, de manera que el generador pueda trabajar con cualquiera de ellas sin necesitar cambios adicionales.
 
-- el número del grupo.
-- cuántos horarios tiene.
-- si ese grupo presenta choque con otro.
-- la lista de horarios asociados.
+Un detalle importante es que `schedule-clash`, en los grupos, indica si existe algún choque con otro grupo, pero no especifica con cuál. Por esta razón, los choques entre grupos se vuelven a calcular en Racket cuando se generan las combinaciones.
 
-Es decir, `Group` es la representación de todas las clases que ofrece este grupo en particular. Aquí ya se empieza a ver cómo se modela la realidad del problema: cada curso no es solo un código, sino una oferta académica con varias opciones de horario.
+### Preferencias del estudiante
 
-## 3.3 Curso: la materia con sus requisitos y grupos
+Para representar las preferencias se definieron dos estructuras:
 
-La estructura `Curso` es la más importante del sistema, porque representa la materia completa. 
-Aquí se guarda la información que define al curso:
+| Struct | Campos | Descripción |
+|---|---|---|
+| `CourseInterest` | `code`, `groups` | Identifica un curso de interés y los grupos que el estudiante desea llevar. Se permiten varios grupos para un mismo curso. |
+| `Preferences` | `interests`, `min-credits`, `max-credits` | Contiene los cursos de interés y el rango de créditos que se desea obtener. |
 
-- código.
-- nombre.
-- créditos.
-- cantidad de grupos disponibles.
-- lista de grupos.
-- prerrequisitos.
-- correquisitos.
-- dos banderas calculadas: si tiene choque de horario y si el estudiante puede matricularlo.
+Esto permite representar las preferencias del estudiante de forma sencilla y facilita el filtrado inicial de los cursos y grupos disponibles.
 
-Esto hace que cada curso sea una entidad completa y propia. No solo conoce sus datos básicos,pero también si cumple con las condiciones académicas y si su oferta horaria es viable.
+### Combinaciones
 
-## 3.4 Catalog: el conjunto completo de cursos
+Las combinaciones generadas también tienen sus propias estructuras:
 
-`Catalog` es la estructura que reúne todos los cursos del plan de estudios. Tiene la cantidad total de cursos y un arreglo con ellos, es como la vista global del problema.
+| Struct | Campos | Descripción |
+|---|---|---|
+| `Selection` | `course`, `group`, `career`, `credits` | Representa un curso junto con el grupo seleccionado. También guarda la carrera y los créditos para evitar tener que consultar nuevamente el catálogo. |
+| `Combination` | `selections`, `total-credits` | Representa una posible matrícula, con un máximo de un grupo por curso y sin choques de horario. |
 
-Con esta estructura el programa puede recorrer todo el catálogo para:
+Las selecciones se mantienen en el mismo orden en que aparecen los cursos en el catálogo. Además, no se genera una combinación vacía, ya que no representa una matrícula válida.
 
-- revisar requisitos.
-- detectar choques de horario.
-- y generar el JSON final con la información procesada.
+### Alias de tipos
 
-Es como tener el plan completo del estudiante en una sola estructura para poder analizarlo de manera ordenada.
+También se definieron algunos alias para facilitar la lectura del código y especificar qué espera cada función:
 
-## 3.5 Record: el historial del estudiante
+- `ClashPredicate`: representa una función que recibe dos grupos y devuelve un booleano indicando si tienen un choque de horario. El generador recibe esta función como parámetro, por lo que no necesita conocer cómo se determina un choque. Esto permitió probar el generador utilizando una función sencilla mientras se desarrollaba la implementación definitiva (`groups-clash?`).
+- `CombinationStream`: representa un flujo de combinaciones y se define como `(Sequenceof Combination)`. Es el tipo utilizado tanto por el generador como por el filtro de créditos.
 
-Por otro lado, `Record` guarda los cursos aprobados por el estudiante. Esto es lo que permite validar si una materia realmente puede ser elegida, según lo que ya ha cursado.
+### Uso de streams
 
-En otras palabras, `Record` es la memoria académica del estudiante y sirve como base para decidir si cumple con los prerrequisitos y correquisitos.
+Una de las principales consideraciones de esta etapa fue la cantidad de combinaciones que se pueden generar. Por ejemplo, con 12 cursos y 3 grupos disponibles para cada uno, se pueden obtener alrededor de 16 millones de posibilidades.
 
-## 3.6 Cómo encajan todas estas estructuras
+Generar todas esas combinaciones y almacenarlas en una lista consumiría demasiada memoria. Para evitarlo, se utilizaron streams de `racket/stream`, que permiten generar los resultados conforme se van necesitando, sin calcularlos todos desde el inicio.
 
-La relación entre todo esto es bastante directa:
+Durante el desarrollo surgió un inconveniente con Typed Racket 8.10, ya que algunas operaciones de streams, como `stream-cons`, `stream` y `stream-first`, no cuentan con tipos disponibles para utilizarse directamente desde un módulo tipado.
 
-1. `Schedule` representa un horario puntual.
-2. `Group` agrupa varios horarios de un grupo.
-3. `Curso` reúne la información del curso y sus grupos.
-4. `Catalog` reúne todos los cursos.
-5. `Record` representa el historial académico del estudiante.
+Para resolverlo se separó esta funcionalidad en dos archivos:
 
-Y esta organización es útil porque cada parte del programa trabaja con la estructura adecuada, primero que todo los horarios se comparan para detectar choques, los cursos se validan según requisitos y el catálogo se recorre para obtener el resultado final. No hay una mezcla enorme de información ni una lógica dispersa por todos lados.
+- `lazy-untyped.rkt`: contiene las operaciones de `racket/stream` dentro de un módulo sin tipos.
+- `lazy.rkt`: importa esas operaciones mediante `require/typed`, asignándoles los tipos genéricos correspondientes. Por ejemplo, `lazy-cons` recibe un elemento y una función que produce el resto del stream.
 
-En resumen, el diseño busca que cada estructura represente bien una parte del problema sin complicar demasiado el código. Eso hace que el proyecto sea más mantenible y más fácil de extender cuando se necesite seguir desarrollando en la siguiente etapa.
+De esta forma, el resto del programa puede utilizar los streams sin tener que trabajar directamente con las operaciones sin tipos.
 
----
+La generación perezosa se consigue utilizando una función sin argumentos (thunk) para representar el resto del stream. Esta función solamente se ejecuta cuando se solicita el siguiente elemento.
 
+### Funcionamiento interno del generador
 
+El generador no necesita variables mutables para llevar el control de la búsqueda. En su lugar, utiliza parámetros que se van pasando entre las llamadas recursivas:
+
+- `courses`: contiene los cursos que todavía faltan por procesar.
+- `chosen-groups`: guarda los grupos que ya fueron seleccionados. Se utiliza para comprobar si un nuevo grupo produce un choque con alguno de los anteriores.
+- `chosen`: almacena las selecciones realizadas hasta el momento. Se utiliza `cons` para agregarlas al inicio de la lista y luego se invierte el orden al generar la combinación.
+- `credits`: lleva la suma de los créditos de los cursos seleccionados.
+
+Esta forma de trabajar permite mantener el estado de cada búsqueda de manera independiente. También facilita descartar posibilidades tan pronto como se detecta un choque de horario, sin necesidad de continuar explorando esa rama.
+
+### Lectura, validación y escritura de datos
+
+Toda la comunicación con los archivos JSON se maneja desde `io.rkt`. Al leer los archivos, `read-json` devuelve tablas hash, que posteriormente se convierten en las estructuras definidas en `types.rkt`.
+
+Durante este proceso también se realizan varias validaciones para evitar trabajar con información incorrecta:
+
+- No se permiten códigos de curso ni números de grupo duplicados.
+- Los días deben estar dentro del rango de 0 a 6.
+- La hora de inicio debe ser menor que la hora de finalización.
+- Los horarios deben estar dentro de las 24 horas del día.
+- Cada grupo debe tener al menos un horario.
+- Los créditos mínimos no pueden ser mayores que los máximos.
+
+Al escribir los resultados también se comprueba que los créditos totales de cada combinación coincidan con la suma de los créditos de sus selecciones.
+
+Finalmente, los resultados se guardan en un archivo JSON que contiene una versión del formato y una lista llamada `combinaciones`. Cada elemento incluye sus `selecciones` (curso, grupo y carrera) y sus `creditos_totales`.
+
+La escritura se realiza una combinación a la vez, directamente desde el stream. Así se evita convertir todos los resultados en una lista y se mantiene el uso de memoria bajo incluso cuando se generan muchas combinaciones.
