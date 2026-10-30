@@ -1,7 +1,10 @@
 {
   "intereses": [
-    { "codigo": "CE1103", "grupos": [2, 3] }
+    { "codigo": "CE1103", "grupos": [1] },
+    { "codigo": "CE1105", "grupos": [3] },
+    { "codigo": "CI1407", "grupos": [1] },
+    { "codigo": "CS1502", "grupos": [4] }
   ],
-  "creditos_minimos": 12,
-  "creditos_maximos": 18
+  "creditos_minimos": 8,
+  "creditos_maximos": 10
 }

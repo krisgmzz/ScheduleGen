@@ -128,12 +128,12 @@
   ;; La recursión mantiene el separador sin set! ni contadores mutables.
   (call-with-output-file path
     (lambda (out)
-      (display "{\"version\":1,\"combinaciones\":[" out)
+      (display "{\"version\":1,\"combinaciones\":[\n  " out)
       (let loop ([remaining (sequence->stream combinations)] [first? #t])
         (unless (stream-empty? remaining)
-          (unless first? (display "," out))
+          (unless first? (display ",\n  " out))
           (write-json (combination->json (stream-first remaining)) out)
           (loop (stream-rest remaining) #f)))
-      (display "]}\n" out))
+      (display "\n]}\n" out))
     #:exists 'truncate/replace)
   (void))

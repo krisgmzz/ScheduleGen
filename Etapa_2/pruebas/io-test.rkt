@@ -34,9 +34,13 @@
       (put (hash 'intereses '() 'creditos_minimos 7 'creditos_maximos 3))
       (check-exn exn:fail? (lambda () (load-preferences input)))
       (export-combinations output
-        (stream (Combination (list (Selection "TEST01" 1 "Carrera A" 3)) 3)))
+        (stream (Combination (list (Selection "TEST01" 1 "Carrera A" 3)) 3)
+                (Combination (list (Selection "TEST01" 2 "Carrera A" 3)) 3)))
+      (define raw-output (file->string output))
+      (check-true (regexp-match? #rx"},\n  {" raw-output))
       (define result (call-with-input-file output read-json))
       (check-equal? (hash-ref result 'version) 1)
+      (check-equal? (length (hash-ref result 'combinaciones)) 2)
       (check-equal? (hash-ref (first (hash-ref result 'combinaciones)) 'creditos_totales) 3)
       (check-equal? (hash-ref
                      (first (hash-ref (first (hash-ref result 'combinaciones)) 'selecciones))
