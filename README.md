@@ -1,6 +1,6 @@
 # CEmestre – Constructor de Horarios
-## Etapa 1: Paradigma Imperativo 
-## Lenguaje de Programación utilizado: C
+## Etapa 2: Paradigma Funcional
+## Lenguaje de Programación utilizado: Racket
 
 Proyecto del curso CE1106 – Paradigmas de Programación  
 Instituto Tecnológico de Costa Rica - Escuela de Ingeniería en Computadores
@@ -284,40 +284,96 @@ Catalogo.json
 De esta manera, el programa mantiene separadas las responsabilidades de entrada, procesamiento y salida, mientras que main.c únicamente coordina el orden en que se ejecutan los diferentes módulos.
 
 ---
-# 2. Decisiones de diseño
+## 2. Decisiones de Diseño
 
-## 2.1 Justificaciones de decisiones propias y específicas del dataset con ejemplos incluidos
-**Uso de Web Scraper para la recolección de datos.** Debido al inconveniente de que la guía de horarios no presenta opciones para exportar datos se optó por el uso de una extensión de navegador (específicamente Web scraper), dicha extensión permite exportar todos lo datos de la guía de horarios en formato .csv, por lo que el formato predeterminado por esta herramienta fue el seleccionado para procesar todos los datos. No se optó por crear una herramienta propia o ingresar los datos a mano por el esfuerzo extra que esto requiere.
+Para la segunda etapa del proyecto CEmestre se decidió implementar una arquitectura modular utilizando Racket y los principios del paradigma funcional. El objetivo es generar combinaciones de horarios sin choques y filtrarlas según un rango de créditos, aprovechando el catálogo previamente procesado en la etapa desarrollada en C.
 
-**Formato CSV con comillas en todos los campos.** Se definieron tres archivos de entrada (PlanEstudios.csv, Horarios.csv, Aprobados.csv) que siguieran el mismo contrato: cada campo entre comillas dobles, separado por comas (`"CE1101","Introducción a la Programación",...`). Esto simplificó el parser (`split_csv_line`) a una sola función reutilizable en los tres archivos, sin necesidad de manejar casos especiales de campos sin comillas ni comas escapadas.
+Las decisiones de diseño se enfocaron en separar responsabilidades, utilizar estructuras de datos inmutables y evitar la generación de listas completas de combinaciones, ya que la cantidad de posibilidades puede aumentar considerablemente según los cursos y grupos disponibles.
 
-**Normalización de encabezados del scraper.** El scraper utilizado para recolectar los datos exporta nombres de columna genéricos y no descriptivos (`data`, `data2`, `name`, `data8`, etc.) en vez de nombres semánticos. Renombramos manualmente estos encabezados a nombres descriptivos (`codigo`, `nombre`, `requisitos`, `correquisitos`, `creditos`) antes de procesar los archivos, y el programa busca las columnas por nombre en tiempo de ejecución (no por posición fija), de modo que el orden de columnas en el archivo fuente puede variar sin romper la carga. Si se desea usar la misma herramienta para recolectar datos propios debe asegurarse de seguir este mismo formato, sin importar el orden.
+### 2.1. Justificación de las decisiones de implementación
 
-**Prerrequisitos y correquisitos como lista separada por comas dentro de una sola celda.** Un curso como CE1103 tiene tres prerrequisitos (CE1101, CE1104, MA1403); estos se representan en una única celda del CSV como `"CE1101,CE1104,MA1403"` y se separan en tiempo de carga con una función dedicada (`parse_codes`). Cuando un curso no tiene prerrequisitos o correquisitos (ejemplo: CE1101 no requiere ningún curso previo), la celda contiene el valor centinela `"No hay"`.
+**Separación del programa en módulos**
 
-**Filtro por sede.** Horarios.csv incluye grupos de todas las sedes del TEC. Filtramos únicamente los grupos cuya sede coincide exactamente con "CAMPUS TECNOLOGICO CENTRAL CARTAGO", descartando el resto antes de intentar asociarlos a un curso del catálogo.
+Se decidió dividir la implementación en diferentes archivos, cada uno con una responsabilidad específica. `io.rkt` se encarga de la lectura y escritura de archivos JSON; `types.rkt` define las estructuras de datos; `clash.rkt` implementa la detección de choques; `generator.rkt` construye las combinaciones; y `filtro.rkt` aplica los criterios de filtrado.
 
-**Representación de horas en minutos desde medianoche.** Cada horario (ejemplo: grupo 10 de MA0101, que corre martes de 15:00 a 17:50) se almacena como enteros (`begin_time=900, end_time=1070`) en vez de strings de hora. Esto simplifica la comparación numérica para la detección de choques de horario, evitando parsear texto en cada comparación.
+Adicionalmente, `lazy.rkt` y `lazy-untyped.rkt` proporcionan las operaciones necesarias para trabajar con streams, mientras que `main.rkt` coordina la ejecución general del programa.
 
+Esta organización facilita las pruebas, el mantenimiento y la identificación de errores, ya que permite modificar una funcionalidad sin afectar directamente las responsabilidades de los demás módulos.
 
-## 2.2 Caso límite real encontrado y su solución
+**Uso de streams y evaluación perezosa**
 
-Durante la recolección de datos con el scraper, notamos dos inconsistencias frente al
-contrato de formato que habíamos definido:
+Se eligió utilizar streams en lugar de generar todas las combinaciones mediante listas completas. Esta decisión responde a que cada curso puede tener varios grupos, lo que aumenta significativamente la cantidad de combinaciones posibles.
 
-1. La primera línea de cada CSV (los encabezados) se exportaba sin comillas (`web_scraper_order,web_scraper_start_url,...`), a diferencia de las filas de datos,que sí llevan comillas en cada campo. En vez de modificar el parser para tolerar dos formatos distintos según la fila (lo que hubiera complicado la lógica de `split_csv_line`, ejecutada miles de veces por archivo), optamos por normalizar el encabezado manualmente una sola vez por archivo, manteniendo el contrato de formato consistente.
+Mediante la evaluación perezosa, las combinaciones se producen conforme se necesitan, sin almacenar necesariamente todas las alternativas en memoria. Para ello se implementaron operaciones como `lazy-cons` y `lazy-append`, que permiten construir y recorrer los resultados de forma progresiva.
 
-2. Los archivos generados por el scraper incluían un BOM (Byte Order Mark, bytes `0xEF 0xBB 0xBF`) al inicio, propio de archivos codificados en UTF-8 desde ciertas herramientas. Sin manejarlo explícitamente, esos tres bytes quedaban pegados al primer campo de la primera línea leída, corrompiendo su valor. Resolvimos esto con una función `open_file_csv` que detecta el BOM al abrir el archivo y, si está presente, avanza el cursor de lectura más allá de esos bytes antes de procesar cualquier línea.
+**Generación mediante recursión e inmutabilidad**
 
-3. Para la validación de correquisitos, identificamos que el criterio "correcto" según la normativa del TEC permitiría matricular un correquisito si el estudiante lo va a cursar simultáneamente en el mismo ciclo, por lo que se debió agregar una archivo extra donde se indiquen los cursos a matricular.
+La generación de combinaciones se desarrolló mediante funciones recursivas. Para cada curso, el programa considera la posibilidad de omitirlo o seleccionar uno de sus grupos disponibles. Antes de incorporar un grupo, verifica que no presente choques con los grupos seleccionados previamente.
 
-## 2.3 Justificación del formato de salida
+Cuando se detecta una incompatibilidad, esa alternativa se descarta sin continuar construyendo la combinación. Esto reduce la exploración de opciones inválidas.
 
-Elegimos JSON como formato de salida porque la estructura de los datos es naturalmente jerárquica: un curso contiene una lista de grupos, y cada grupo contiene una lista de horarios. JSON representa esta relación de forma directa mediante objetos y arreglos anidados, mientras que un formato plano como CSV requeriría aplanar esta jerarquía (por ejemplo, una fila por combinación curso-grupo-horario), complicando su reconstrucción en la siguiente etapa del proyecto (Racket).
+Además, el estado de cada combinación se transmite mediante parámetros de las funciones, sin modificar variables globales ni utilizar operaciones de mutación como `set!`. De esta manera, se respetan los principios del paradigma funcional.
 
-Se decidió omitir el campo `aula` del `Schedule` en el archivo de salida, a pesar de estar presente en la estructura interna (`structs.h`), ya que no forma parte de los campos mínimos solicitados en el enunciado y no fue capturado consistentemente en el proceso de recolección de datos.
+**Uso de tipos explícitos y polimorfismo paramétrico**
 
-Para probar la Etapa 2, `Etapa_2/Preferencias.json` contiene preferencias de ejemplo y debe ajustarse a los datos del estudiante. `Etapa_2/Combinaciones.json` es un archivo generado por el programa y no se versiona.
+Se utilizó Typed Racket para definir estructuras como `Course`, `Group`, `Schedule`, `Selection` y `Combination`, junto con sus respectivos tipos de datos.
+
+Para las operaciones de entrada y salida se incorporaron contratos que permiten comprobar los datos recibidos y detectar errores en su estructura.
+
+Asimismo, se implementó la función genérica `filter-stream`, utilizando polimorfismo paramétrico. Esta función recibe una secuencia y un predicado, por lo que puede reutilizarse para filtrar diferentes tipos de elementos sin desarrollar una función distinta para cada caso.
+
+### 2.2. Caso límite identificado y solución implementada
+
+Uno de los casos límite considerados fue la existencia de grupos cuyos horarios terminan exactamente cuando comienza otra clase.
+
+Por ejemplo, si un grupo tiene una lección de 7:30 a 9:20 y otro comienza a las 9:20 del mismo día, ambos deben considerarse compatibles, ya que no existe una superposición real de tiempo.
+
+Para resolverlo, en `clash.rkt` se implementó la comparación utilizando intervalos semiabiertos, donde el inicio pertenece al intervalo y el instante final queda excluido. De esta forma, únicamente se considera un choque cuando ambas franjas horarias presentan una superposición efectiva.
+
+Esta decisión evita descartar combinaciones válidas debido a clases consecutivas y permite mantener un criterio consistente de detección de choques.
+
+Adicionalmente, durante la lectura de archivos se contemplan situaciones como campos obligatorios ausentes, grupos sin horarios y códigos duplicados. En estos casos, `io.rkt` genera errores explícitos en lugar de continuar procesando información incorrecta.
+
+### 2.3. Justificación del formato de salida
+
+Se decidió utilizar JSON como formato de salida debido a que permite representar las combinaciones mediante una estructura jerárquica, clara y fácil de interpretar por las siguientes etapas del proyecto.
+
+Cada combinación contiene una lista de selecciones, donde se identifica el código del curso, su grupo y la carrera de origen. También incluye el total de créditos correspondiente.
+
+La estructura general es la siguiente:
+
+```json
+{
+  "version": 1,
+  "combinaciones": [
+    {
+      "selecciones": [
+        {
+          "curso": "CE1103",
+          "grupo": 2,
+          "carrera": "Ingeniería en Computadores"
+        },
+        {
+          "curso": "MA1103",
+          "grupo": 1,
+          "carrera": "Ingeniería en Computadores"
+        }
+      ],
+      "creditos_totales": 8
+    }
+  ]
+}
+```
+
+*El ejemplo anterior es ilustrativo y no representa una combinación verificada con el catálogo.*
+
+Una ventaja de este formato es que permite asociar directamente los cursos seleccionados con sus respectivos grupos y carreras, sin depender de posiciones específicas dentro de un archivo CSV.
+
+Además, se decidió incluir el campo `version`, que permite identificar la estructura utilizada y facilita posibles modificaciones futuras al contrato de datos.
+
+La exportación se implementó en `io.rkt`, escribiendo las combinaciones progresivamente conforme se recorren los streams. Esto evita convertir todos los resultados en una lista antes de generar el archivo.
+
+Finalmente, JSON facilita la comunicación con la siguiente etapa desarrollada en Prolog, ya que proporciona una estructura organizada que puede ser interpretada para aplicar las restricciones adicionales del proyecto, sin necesidad de reconstruir las combinaciones desde cero.
 ---
 # 3. Estructuras de datos desarrolladas
 
