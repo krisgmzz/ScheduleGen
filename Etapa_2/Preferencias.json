@@ -1,10 +1,11 @@
 {
   "intereses": [
-    { "codigo": "CE1103", "grupos": [1] },
-    { "codigo": "CE1105", "grupos": [3] },
-    { "codigo": "CI1407", "grupos": [1] },
-    { "codigo": "CS1502", "grupos": [4] }
+    { "codigo": "QUI1102", "grupos": [2, 3] },
+    { "codigo": "CS1502", "grupos": [2, 3] },
+    { "codigo": "FI1101", "grupos": [13, 8] },
+    { "codigo": "FI11201", "grupos": [11, 27] },
+    { "codigo": "MA1103", "grupos": [11, 9]}
   ],
-  "creditos_minimos": 8,
+  "creditos_minimos": 6,
   "creditos_maximos": 10
 }

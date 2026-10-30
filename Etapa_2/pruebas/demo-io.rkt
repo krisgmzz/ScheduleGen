@@ -2,7 +2,7 @@
 
 (require racket/stream racket/runtime-path "../types.rkt" "../io.rkt")
 (define-runtime-path catalog-path "../../Etapa_1_C/Catalogo.json")
-(define-runtime-path preferences-path "../ejemplos/Preferencias.json")
+(define-runtime-path preferences-path "../Preferencias.json")
 (define-runtime-path output-path "Combinaciones.demo.json")
 
 (define catalog (load-catalog catalog-path))
