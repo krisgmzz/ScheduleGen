@@ -14,15 +14,11 @@
 (define catalogo
   (load-catalog catalogo-path))
 
-;; Leo las preferencias para elegir cursos, grupos y rango de creditos.
+;; Las preferencias se leen, pero en esta etapa solo se usan los créditos.
 (define preferencias
   (load-preferences preferencias-path))
 
-;; Primero reduzco el catalogo a cursos habilitados y grupos de interes.
-(define catalogo-candidato
-  (filter-candidate-courses catalogo preferencias))
-
-;; Genero combinaciones y luego filtro el rango de creditos.
+;; Generar combinaciones sin choques y conservar solo las del rango de créditos.
 (define combinaciones
   (generate-combinations catalogo-candidato groups-clash?))
 
