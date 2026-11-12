@@ -1,0 +1,1630 @@
+{
+    "cursos": [
+        {
+            "codigo": "CI0200",
+            "nombre": "examen diagnóstico",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CI0202",
+            "nombre": "inglés básico",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "BI1103",
+            "nombre": "biología agrícola",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "BI1104"
+            ],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "BI1104",
+            "nombre": "laboratorio de biología agrícola",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "BI1103"
+            ],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CI1106",
+            "nombre": "comunicación escrita",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CI1230",
+            "nombre": "inglés i",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [
+                "CI0200",
+                "CI0202"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA1002",
+            "nombre": "fundamentos de ingeniería agrícola",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "MA0101",
+            "nombre": "matemática general",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1070},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1070},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 740},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 960, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "QU1102",
+            "nombre": "laboratorio de química básica i",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "QU1106"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "QU1106",
+            "nombre": "química básica i",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "QU1102"
+            ],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CI1107",
+            "nombre": "comunicación oral",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CI1231",
+            "nombre": "inglés II",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [
+                "CI1230"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CS1502",
+            "nombre": "introducción a la técnica ciencia y tecnología",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CS3305",
+            "nombre": "legislación agrícola",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA1203",
+            "nombre": "dibujo técnico",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "MA0101"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "MA1102",
+            "nombre": "cálculo diferencial e integral",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 4,
+            "prerrequisitos": [
+                "MA0101"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 620},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1130},
+                        {"dia": 4, "inicio": 960, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 620},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 21,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 20,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1250},
+                        {"dia": 4, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 740},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 960, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1190},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 740},
+                        {"dia": 4, "inicio": 630, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 16,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1070},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 630, "fin": 740},
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1070},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 630, "fin": 740},
+                        {"dia": 4, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1190},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 900, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 22,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1130},
+                        {"dia": 4, "inicio": 960, "fin": 1070}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "QU1104",
+            "nombre": "laboratorio de química básica II",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [
+                "QU1102",
+                "QU1106"
+            ],
+            "correquisitos": [
+                "QU1107"
+            ],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "QU1107",
+            "nombre": "química básica II",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "QU1102",
+                "QU1106"
+            ],
+            "correquisitos": [
+                "QU1104"
+            ],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "FI1101",
+            "nombre": "física general i",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "MA1102"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 20,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "FI1201",
+            "nombre": "laboratorio física general i",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "FI1101"
+            ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 27,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 23,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 24,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 22,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 16,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 26,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 29,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 25,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "IA2105",
+            "nombre": "laboratorio de edafología",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "IA2107"
+            ],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA2107",
+            "nombre": "edafología",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "QU1106"
+            ],
+            "correquisitos": [
+                "IA2105"
+            ],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA2204",
+            "nombre": "programación aplicada",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "MA1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3302",
+            "nombre": "topografía",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "IA1203"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "MA1103",
+            "nombre": "cálculo y álgebra lineal",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 4,
+            "prerrequisitos": [
+                "MA1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 960, "fin": 1070},
+                        {"dia": 1, "inicio": 960, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 18,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 14,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 16,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 12,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 19,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 17,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1190},
+                        {"dia": 4, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 960, "fin": 1070},
+                        {"dia": 4, "inicio": 960, "fin": 1070}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "SE1100",
+            "nombre": "actividad cultural i",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "FH1000",
+            "nombre": "centros de formación humanística",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "FI2103",
+            "nombre": "física general III",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI1101",
+                "MA1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA2106",
+            "nombre": "sistemas de producción agrícola",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 4,
+            "prerrequisitos": [
+                "BI1103",
+                "IA2107"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA2202",
+            "nombre": "estática",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI1101",
+                "IA1203"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3303",
+            "nombre": "aplicaciones topográficas",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "IA3302"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "MA2105",
+            "nombre": "ecuaciones diferenciales",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 4,
+            "prerrequisitos": [
+                "MA1103"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "SE1200",
+            "nombre": "actividad deportiva i",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3202",
+            "nombre": "estadística aplicada",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "MA1103"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3206",
+            "nombre": "resistencia de materiales",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "IA2202"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3208",
+            "nombre": "electricidad",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI1101"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3212",
+            "nombre": "mecánica de fluidos aplicada",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI2103"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "MA3106",
+            "nombre": "métodos numéricos",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 4,
+            "prerrequisitos": [
+                "MA1103"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "SE1400",
+            "nombre": "actividad cultural-deportiva",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CM2103",
+            "nombre": "termodinámica",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "MA1102",
+                "QU1107"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3105",
+            "nombre": "relación suelo-agua-planta",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "IA2106",
+                "QU1107"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3203",
+            "nombre": "hidrología",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "IA3202"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3210",
+            "nombre": "laboratorio de hidráulica",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [
+                "IA3213"
+            ],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3213",
+            "nombre": "hidráulica de canales",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "IA3212"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA3401",
+            "nombre": "elementos y mecanismos de máquinas agrícolas",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 2,
+            "prerrequisitos": [
+                "IA3206",
+                "IA3208"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "IA5601",
+            "nombre": "protección ambiental",
+            "carrera": "Ingeniería Agrícola",
+            "creditos": 3,
+            "prerrequisitos": [
+                "IA2106"
+            ],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": false,
+            "grupos": [
+            ]
+        }
+    ]
+}

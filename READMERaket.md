@@ -235,7 +235,7 @@ Los nombres de las estructuras y sus campos están en inglés, mientras que las 
 ### Flujo de los datos
 
 ```text
-Catalogo.json ──► Catalog ──► Catalog reducido ──► CombinationStream ──► CombinationStream ──► Combinaciones.json
+Catalogo.json ──► Catalog ──► Catalog reducido ──► CombinationStream ──► FilterCredits ──► Combinaciones.json
 Preferencias.json ─► Preferences   
 ```
 
@@ -300,7 +300,6 @@ De esta forma, el resto del programa puede utilizar los streams sin tener que tr
 
 La generación perezosa se consigue utilizando una función sin argumentos (thunk) para representar el resto del stream. Esta función solamente se ejecuta cuando se solicita el siguiente elemento.
 
-<<<<<<< HEAD
 ### Funcionamiento interno del generador
 
 El generador no necesita variables mutables para llevar el control de la búsqueda. En su lugar, utiliza parámetros que se van pasando entre las llamadas recursivas:
@@ -330,5 +329,3 @@ Al escribir los resultados también se comprueba que los créditos totales de ca
 Finalmente, los resultados se guardan en un archivo JSON que contiene una versión del formato y una lista llamada `combinaciones`. Cada elemento incluye sus `selecciones` (curso, grupo y carrera) y sus `creditos_totales`.
 
 La escritura se realiza una combinación a la vez, directamente desde el stream. Así se evita convertir todos los resultados en una lista y se mantiene el uso de memoria bajo incluso cuando se generan muchas combinaciones.
-=======
->>>>>>> 4781d0d064757d39ce5cb1b400e4913c10ef2f87
