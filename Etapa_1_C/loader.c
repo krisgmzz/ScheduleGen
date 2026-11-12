@@ -86,6 +86,7 @@ void load_study_plan(const char *filename, Catalog *catalog) {
     int prerequisites_index = -1; // índice del campo de prerrequisitos en el CSV
     int corequisites_index = -1; // índice del campo de correquisitos en el CSV
     int credits_index = -1; // índice del campo de créditos en el CSV
+    int career_index = -1; // índice del campo de carrera en el CSV
 
     // Obtener campos de la primera línea para verificar el formato
     if(fgets(line, sizeof(line), study_plan) == NULL) {
@@ -104,7 +105,9 @@ void load_study_plan(const char *filename, Catalog *catalog) {
             corequisites_index = i;
         } else if (strcmp(fields[i], "creditos") == 0) {
             credits_index = i;
-        }
+        } else if (strcmp(fields[i], "carrera") == 0) {
+	    career_index = i;
+	}
     }
     if (code_index == -1 || name_index == -1 || prerequisites_index == -1 || corequisites_index == -1 || credits_index == -1) {
         fprintf(stderr, "El archivo %s no tiene el formato esperado\n", filename);
@@ -118,6 +121,11 @@ void load_study_plan(const char *filename, Catalog *catalog) {
         }
         split_csv_line(line, fields, MAX_COLS, &num_cols);
 
+	// Copiar la carrera al curso que se está cargando
+	strncpy(catalog->courses[course_index].career, fields[career_index], MAX_CAREER -1);
+	catalog->courses[course_index].career[MAX_CAREER -1] = '\0';
+
+
         // Copiar los campos relevantes a la estructura Curso dentro del catálogo
         strncpy(catalog->courses[course_index].code, fields[code_index], MAX_CODE - 1);  // Codigo de curso
         strncpy(catalog->courses[course_index].name, fields[name_index], MAX_NAME - 1); // Nombre de curso
@@ -128,6 +136,7 @@ void load_study_plan(const char *filename, Catalog *catalog) {
         catalog->courses[course_index].credits = atoi(fields[credits_index]); // Número de créditos
         catalog->courses[course_index].num_groups = 0;
         course_index++;
+	
     }
 
 

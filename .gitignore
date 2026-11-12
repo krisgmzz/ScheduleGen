@@ -30,3 +30,6 @@ main
 
 .DS_Store
 thumbs.db
+
+# Salida generada por la Etapa 2; no se versiona.
+Etapa_2/Combinaciones.json

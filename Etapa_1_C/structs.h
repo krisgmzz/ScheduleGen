@@ -24,6 +24,7 @@ typedef struct {
 typedef struct {
     char code[MAX_CODE];
     char name[MAX_NAME];
+    char career[MAX_CAREER]; //Carrera de origen del curso
     int credits;
     
     // Lista de grupos ofertados
