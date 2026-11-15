@@ -29,7 +29,8 @@
                 [schedule-clash : Boolean]
                 [can-enroll : Boolean]
                 [career : String]
-                [groups : (Listof Group)])
+                [groups : (Listof Group)]
+		[area : String])
   #:transparent)
 
 ;; Catalogo completo al cargar. La persona 3 elimina cursos que no interesan.
@@ -60,7 +61,8 @@
 (struct Selection ([course : String]
                    [group : Integer]
                    [career : String]
-                   [credits : Integer])
+                   [credits : Integer]
+		   [area : String])
   #:transparent)
 
 ;; Una combinacion valida: un grupo por curso, sin choques.

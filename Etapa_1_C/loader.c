@@ -87,6 +87,7 @@ void load_study_plan(const char *filename, Catalog *catalog) {
     int corequisites_index = -1; // índice del campo de correquisitos en el CSV
     int credits_index = -1; // índice del campo de créditos en el CSV
     int career_index = -1; // índice del campo de carrera en el CSV
+    int area_index = -1; //índice del campo de área en el CSV
 
     // Obtener campos de la primera línea para verificar el formato
     if(fgets(line, sizeof(line), study_plan) == NULL) {
@@ -107,12 +108,18 @@ void load_study_plan(const char *filename, Catalog *catalog) {
             credits_index = i;
         } else if (strcmp(fields[i], "carrera") == 0) {
 	    career_index = i;
-	}
+	} else if (strcmp(fields[i], "area") == 0) {
+            area_index = i;
+        }
     }
-    if (code_index == -1 || name_index == -1 || prerequisites_index == -1 || corequisites_index == -1 || credits_index == -1) {
+    if (code_index == -1 || name_index == -1 || prerequisites_index == -1 || corequisites_index == -1 || credits_index == -1 ||
+    area_index == -1) {
         fprintf(stderr, "El archivo %s no tiene el formato esperado\n", filename);
         exit(EXIT_FAILURE);
     }
+    //guardar la cantidad de columnas indicada en el encabezado 
+    int expected_cols = null_cols;
+
     // Recorrer el archivo línea por línea y llenar el catálogo
     while(fgets(line, sizeof(line), study_plan) != NULL) {
         if (course_index >= MAX_COURSES_IN_CATALOG) {
@@ -120,6 +127,23 @@ void load_study_plan(const char *filename, Catalog *catalog) {
             exit(EXIT_FAILURE);
         }
         split_csv_line(line, fields, MAX_COLS, &num_cols);
+        // Rechazar filas incompletas y áreas vacías o demasiado largas.
+        if (num_cols != expected_cols ||
+           fields[area_index][0] == '\0' ||
+           strlen(fields[area_index]) >= MAX_AREA) {
+
+           fprintf(stderr,
+                   "Fila %d inválida o área incorrecta en %s\n",
+                    course_index + 2,
+                    filename);
+
+           exit(EXIT_FAILURE);
+        }
+
+        // La longitud ya fue comprobada: se copia el área completa.
+        strcpy(catalog->courses[course_index].area, fields[area_index]);
+
+
 
 	// Copiar la carrera al curso que se está cargando
 	strncpy(catalog->courses[course_index].career, fields[career_index], MAX_CAREER -1);

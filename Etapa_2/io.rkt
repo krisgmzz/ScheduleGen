@@ -73,7 +73,8 @@
           (boolean (field value 'choca_horario))
           (boolean (field value 'puede_matricular))
           (text (field value 'carrera))
-          groups))
+          groups
+	  (text (field value 'area))))
 
 (define/contract (load-catalog path)
   (-> path-string? Catalog?)
@@ -103,7 +104,9 @@
 (define (selection->json selection)
   (hash 'curso (Selection-course selection)
         'grupo (Selection-group selection)
-        'carrera (Selection-career selection)))
+        'carrera (Selection-career selection)
+	'creditos (Selection-credits selection)
+	'area (Selection-area selection)))
 
 (define (combination->json combination)
   (unless (Combination? combination)
@@ -113,6 +116,7 @@
   (for ([selection (in-list selections)])
     (text (Selection-course selection))
     (text (Selection-career selection))
+    (text (Selection-area selection))
     (natural (Selection-group selection))
     (natural (Selection-credits selection)))
   (define total (natural (Combination-total-credits combination)))
@@ -128,7 +132,8 @@
   ;; La recursión mantiene el separador sin set! ni contadores mutables.
   (call-with-output-file path
     (lambda (out)
-      (display "{\"version\":1,\"combinaciones\":[\n  " out)
+      ;;versión 2: cada selección incluye también créditos y área
+      (display "{\"version\":2,\"combinaciones\":[\n  " out)
       (let loop ([remaining (sequence->stream combinations)] [first? #t])
         (unless (stream-empty? remaining)
           (unless first? (display ",\n  " out))

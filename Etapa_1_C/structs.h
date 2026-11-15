@@ -25,6 +25,7 @@ typedef struct {
     char code[MAX_CODE];
     char name[MAX_NAME];
     char career[MAX_CAREER]; //Carrera de origen del curso
+    char area[MAX_AREA]; //área temática que viene del plan de estudios
     int credits;
     
     // Lista de grupos ofertados

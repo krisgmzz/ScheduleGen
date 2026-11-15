@@ -16,6 +16,7 @@
 #define MAX_COMPLETED_COURSES 60
 
 #define MAX_LEN 100 
-#define MAX_COLS 15
+#define MAX_COLS 16 // Las 15 columnas de las demás etapas + la de área
+#define MAX_AREA 40 //Identificación del área temática 
 
 #endif
