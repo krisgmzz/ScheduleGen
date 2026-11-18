@@ -6,7 +6,7 @@
          "filtro.rkt"
          racket/runtime-path)
 
-(define-runtime-path catalogo-path "../Etapa_1_C/Catalogo.json")
+(define-runtime-path catalogo-path "../Etapa_1/Catalogo.json")
 (define-runtime-path preferencias-path "Preferencias.json")
 (define-runtime-path salida-path "Combinaciones.json")
 
