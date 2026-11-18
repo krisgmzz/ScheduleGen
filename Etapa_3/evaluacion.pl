@@ -10,14 +10,6 @@
 :- use_module(modelo).
 :- use_module(politica).
 
-% ============================================================
-% evaluacion.pl - Veredicto de cada combinación
-%
-% Usa los predicados viola_* de politica.pl, que tienen éxito
-% cuando la combinación INCUMPLE la regla correspondiente.
-% No guarda estado: todo se resuelve con argumentos y unificación.
-% ============================================================
-
 % primera_violada(+Cursos, -Regla)
 % Regla es la PRIMERA regla incumplida, en este orden:
 %   1. balance_entre_carreras

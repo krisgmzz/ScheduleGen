@@ -35,3 +35,7 @@ thumbs.db
 
 # Salida generada por la Etapa 2; no se versiona.
 Etapa_2/Combinaciones.json
+Etapa_1/Catalogo.json
+Etapa_3/Catalogo.json
+Etapa_3/Resultado.json
+Etapa_2/build/

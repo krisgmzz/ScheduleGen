@@ -6,20 +6,6 @@
 :- use_module(modelo).
 :- use_module(evaluacion).
 
-% ============================================================
-% exportacion.pl - Escribe el resultado de la evaluación en JSON
-%
-% Formato (version 1):
-%   { "version": 1,
-%     "resultados": [
-%       { "id": 1,
-%         "selecciones": [ {curso, grupo, creditos, carrera, area}, ... ],
-%         "creditos_totales": 7,
-%         "cumple": true | false,
-%         "razon": null | "balance_entre_carreras" | "limite_por_area"
-%                       | "incompatibilidad" } ] }
-% ============================================================
-
 % exportar_resultados(+Ruta)
 % Recorre TODAS las combinaciones cargadas por backtracking
 % (findall sobre combinacion/3) y escribe un solo documento JSON.

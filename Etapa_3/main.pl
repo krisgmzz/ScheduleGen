@@ -4,16 +4,7 @@
 :- use_module(modelo).
 :- use_module(exportacion).
 
-% ============================================================
-% main.pl - Punto de entrada de la Etapa 3
-%
-% Uso:
-%   swipl main.pl                              (usa los nombres por defecto)
-%   swipl main.pl entrada.json                 (salida: Resultado.json)
-%   swipl main.pl entrada.json salida.json
-%
-% Los valores de la política se modifican en politica.pl.
-% ============================================================
+
 
 :- initialization(main, main).
 
