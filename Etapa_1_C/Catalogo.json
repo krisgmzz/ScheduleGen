@@ -1,89 +1,11 @@
 {
     "cursos": [
         {
-            "codigo": "CI0200",
-            "nombre": "examen diagnóstico",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "CI0205",
+            "nombre": "prueba avanzada inglés",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
             "creditos": 0,
-            "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "CI0202",
-            "nombre": "inglés básico",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 2,
-            "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "BI1103",
-            "nombre": "biología agrícola",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [],
-            "correquisitos": [
-                "BI1104"
-            ],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "BI1104",
-            "nombre": "laboratorio de biología agrícola",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 1,
-            "prerrequisitos": [],
-            "correquisitos": [
-                "BI1103"
-            ],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "CI1106",
-            "nombre": "comunicación escrita",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 2,
-            "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "CI1230",
-            "nombre": "inglés i",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 2,
-            "prerrequisitos": [
-                "CI0200",
-                "CI0202"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA1002",
-            "nombre": "fundamentos de ingeniería agrícola",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 1,
             "prerrequisitos": [],
             "correquisitos": [],
             "choca_horario": false,
@@ -94,7 +16,8 @@
         {
             "codigo": "MA0101",
             "nombre": "matemática general",
-            "carrera": "Ingeniería Agrícola",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 2,
             "prerrequisitos": [],
             "correquisitos": [],
@@ -199,131 +122,17 @@
             ]
         },
         {
-            "codigo": "QU1102",
-            "nombre": "laboratorio de química básica i",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 1,
-            "prerrequisitos": [],
-            "correquisitos": [
-                "QU1106"
-            ],
-            "choca_horario": true,
-            "puede_matricular": true,
-            "grupos": [
-                {
-                    "numero": 2,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 1, "inicio": 570, "fin": 680}
-                    ]
-                },
-                {
-                    "numero": 3,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 1, "inicio": 780, "fin": 890}
-                    ]
-                },
-                {
-                    "numero": 11,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 3, "inicio": 780, "fin": 890}
-                    ]
-                },
-                {
-                    "numero": 8,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 900, "fin": 1010}
-                    ]
-                },
-                {
-                    "numero": 15,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 4, "inicio": 780, "fin": 890}
-                    ]
-                },
-                {
-                    "numero": 4,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 1, "inicio": 900, "fin": 1010}
-                    ]
-                },
-                {
-                    "numero": 5,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 450, "fin": 560}
-                    ]
-                },
-                {
-                    "numero": 6,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 570, "fin": 680}
-                    ]
-                },
-                {
-                    "numero": 7,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 780, "fin": 890}
-                    ]
-                },
-                {
-                    "numero": 9,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 3, "inicio": 450, "fin": 560}
-                    ]
-                },
-                {
-                    "numero": 10,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 3, "inicio": 570, "fin": 680}
-                    ]
-                },
-                {
-                    "numero": 1,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 1, "inicio": 450, "fin": 560}
-                    ]
-                },
-                {
-                    "numero": 13,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 4, "inicio": 450, "fin": 560}
-                    ]
-                }
-            ]
-        },
-        {
-            "codigo": "QU1106",
-            "nombre": "química básica i",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "CE1101",
+            "nombre": "introducción a la programación",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
             "creditos": 3,
             "prerrequisitos": [],
-            "correquisitos": [
-                "QU1102"
-            ],
+            "correquisitos": [],
             "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
                 {
-                    "numero": 2,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 3, "inicio": 450, "fin": 560},
-                        {"dia": 1, "inicio": 450, "fin": 560}
-                    ]
-                },
-                {
                     "numero": 1,
                     "choca_horario": true,
                     "horarios": [
@@ -332,150 +141,43 @@
                     ]
                 },
                 {
-                    "numero": 3,
+                    "numero": 2,
                     "choca_horario": true,
                     "horarios": [
                         {"dia": 3, "inicio": 570, "fin": 680},
                         {"dia": 1, "inicio": 570, "fin": 680}
                     ]
-                },
-                {
-                    "numero": 9,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 570, "fin": 680},
-                        {"dia": 4, "inicio": 570, "fin": 680}
-                    ]
-                },
-                {
-                    "numero": 7,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 3, "inicio": 900, "fin": 1010},
-                        {"dia": 1, "inicio": 900, "fin": 1010}
-                    ]
-                },
-                {
-                    "numero": 5,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 3, "inicio": 780, "fin": 890},
-                        {"dia": 1, "inicio": 780, "fin": 890}
-                    ]
-                },
-                {
-                    "numero": 11,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 780, "fin": 890},
-                        {"dia": 4, "inicio": 780, "fin": 890}
-                    ]
                 }
             ]
         },
         {
-            "codigo": "CI1107",
-            "nombre": "comunicación oral",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 1,
+            "codigo": "CE1104",
+            "nombre": "fundamentos de sistemas computacionales",
+            "carrera": "Ingeniería en Computadores",
+            "area": "arquitectura_digital",
+            "creditos": 3,
             "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "CI1231",
-            "nombre": "inglés II",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 2,
-            "prerrequisitos": [
-                "CI1230"
+            "correquisitos": [
+                "CE1101"
             ],
-            "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
-            ]
-        },
-        {
-            "codigo": "CS1502",
-            "nombre": "introducción a la técnica ciencia y tecnología",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 1,
-            "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": true,
-            "puede_matricular": true,
-            "grupos": [
-                {
-                    "numero": 2,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 570, "fin": 680}
-                    ]
-                },
-                {
-                    "numero": 3,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 1020, "fin": 1130}
-                    ]
-                },
-                {
-                    "numero": 4,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 1, "inicio": 900, "fin": 1010}
-                    ]
-                },
-                {
-                    "numero": 5,
-                    "choca_horario": true,
-                    "horarios": [
-                        {"dia": 2, "inicio": 570, "fin": 680}
-                    ]
-                },
                 {
                     "numero": 1,
                     "choca_horario": true,
                     "horarios": [
-                        {"dia": 3, "inicio": 570, "fin": 680}
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
                     ]
                 }
-            ]
-        },
-        {
-            "codigo": "CS3305",
-            "nombre": "legislación agrícola",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 2,
-            "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA1203",
-            "nombre": "dibujo técnico",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "MA0101"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
             ]
         },
         {
             "codigo": "MA1102",
             "nombre": "cálculo diferencial e integral",
-            "carrera": "Ingeniería Agrícola",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 4,
             "prerrequisitos": [
                 "MA0101"
@@ -662,48 +364,448 @@
             ]
         },
         {
-            "codigo": "QU1104",
-            "nombre": "laboratorio de química básica II",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "MA1403",
+            "nombre": "matemática discreta",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
+            "creditos": 4,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "QU1102",
+            "nombre": "laboratorio de química básica i",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 1,
-            "prerrequisitos": [
-                "QU1102",
+            "prerrequisitos": [],
+            "correquisitos": [
                 "QU1106"
             ],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 15,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 13,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "QU1106",
+            "nombre": "química básica i",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
+            "creditos": 3,
+            "prerrequisitos": [],
             "correquisitos": [
-                "QU1107"
+                "QU1102"
             ],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "SE1100",
+            "nombre": "actividad cultural i",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
             "grupos": [
             ]
         },
         {
-            "codigo": "QU1107",
-            "nombre": "química básica II",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "SE1200",
+            "nombre": "actividad deportiva i",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
+            "grupos": [
+            ]
+        },
+        {
+            "codigo": "CE1103",
+            "nombre": "algoritmos y estructuras de datos i",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1101",
+                "CE1104",
+                "MA1403"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1105",
+            "nombre": "principios de modelado en ingeniería",
+            "carrera": "Ingeniería en Computadores",
+            "area": "gestion_diseno",
             "creditos": 3,
             "prerrequisitos": [
-                "QU1102",
-                "QU1106"
+                "CE1104"
             ],
-            "correquisitos": [
-                "QU1104"
-            ],
-            "choca_horario": false,
-            "puede_matricular": false,
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
             "grupos": [
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1140, "fin": 1250},
+                        {"dia": 1, "inicio": 1140, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CI1407",
+            "nombre": "habilidades de comunicación en ingeniería",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CS1502",
+            "nombre": "introducción a la técnica ciencia y tecnología",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 1,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                }
             ]
         },
         {
             "codigo": "FI1101",
             "nombre": "física general i",
-            "carrera": "Ingeniería Agrícola",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 3,
-            "prerrequisitos": [],
-            "correquisitos": [
+            "prerrequisitos": [
                 "MA1102"
             ],
+            "correquisitos": [],
             "choca_horario": true,
             "puede_matricular": true,
             "grupos": [
@@ -848,7 +950,8 @@
         {
             "codigo": "FI1201",
             "nombre": "laboratorio física general i",
-            "carrera": "Ingeniería Agrícola",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 1,
             "prerrequisitos": [],
             "correquisitos": [
@@ -1035,67 +1138,10 @@
             ]
         },
         {
-            "codigo": "IA2105",
-            "nombre": "laboratorio de edafología",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 2,
-            "prerrequisitos": [],
-            "correquisitos": [
-                "IA2107"
-            ],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA2107",
-            "nombre": "edafología",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "QU1106"
-            ],
-            "correquisitos": [
-                "IA2105"
-            ],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA2204",
-            "nombre": "programación aplicada",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "MA1102"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA3302",
-            "nombre": "topografía",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "IA1203"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
             "codigo": "MA1103",
             "nombre": "cálculo y álgebra lineal",
-            "carrera": "Ingeniería Agrícola",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 4,
             "prerrequisitos": [
                 "MA1102"
@@ -1257,9 +1303,10 @@
             ]
         },
         {
-            "codigo": "SE1100",
-            "nombre": "actividad cultural i",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "SE1400",
+            "nombre": "actividad cultural-deportiva",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
             "creditos": 0,
             "prerrequisitos": [],
             "correquisitos": [],
@@ -1269,80 +1316,747 @@
             ]
         },
         {
-            "codigo": "FH1000",
-            "nombre": "centros de formación humanística",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 0,
-            "prerrequisitos": [],
+            "codigo": "CE2103",
+            "nombre": "algoritmos y estructuras de datos II",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1103",
+                "CE1105"
+            ],
             "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
+            "choca_horario": true,
+            "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                }
             ]
         },
         {
-            "codigo": "FI2103",
-            "nombre": "física general III",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
+            "codigo": "CS2101",
+            "nombre": "ambiente humano",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 2,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": true,
+            "grupos": [
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1070}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1080, "fin": 1250}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "EL2113",
+            "nombre": "circuitos eléctricos en corriente continua",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electronica",
+            "creditos": 4,
             "prerrequisitos": [
                 "FI1101",
                 "MA1102"
             ],
             "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 560},
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "FH1000",
+            "nombre": "centros de formación humanística",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 0,
+            "prerrequisitos": [],
+            "correquisitos": [],
+            "choca_horario": false,
+            "puede_matricular": true,
             "grupos": [
             ]
         },
         {
-            "codigo": "IA2106",
-            "nombre": "sistemas de producción agrícola",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "FI1102",
+            "nombre": "física general II",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI1101"
+            ],
+            "correquisitos": [
+                "MA1102"
+            ],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "FI1202",
+            "nombre": "laboratorio física general II",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
+            "creditos": 1,
+            "prerrequisitos": [
+                "FI1201"
+            ],
+            "correquisitos": [
+                "FI1102"
+            ],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "MA2104",
+            "nombre": "cálculo superior",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 4,
             "prerrequisitos": [
-                "BI1103",
-                "IA2107"
+                "MA1103"
             ],
             "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1080, "fin": 1190},
+                        {"dia": 1, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 5, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1190},
+                        {"dia": 4, "inicio": 1080, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                }
             ]
         },
         {
-            "codigo": "IA2202",
-            "nombre": "estática",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "CE1106",
+            "nombre": "paradigmas de programación",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
             "creditos": 3,
             "prerrequisitos": [
-                "FI1101",
-                "IA1203"
+                "CE2103"
             ],
             "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                }
             ]
         },
         {
-            "codigo": "IA3303",
-            "nombre": "aplicaciones topográficas",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
+            "codigo": "CE2201",
+            "nombre": "laboratorio de circuitos eléctricos",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electronica",
+            "creditos": 1,
             "prerrequisitos": [
-                "IA3302"
+                "FI1202"
             ],
             "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "EL2114",
+            "nombre": "circuitos eléctricos en corriente alterna",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electronica",
+            "creditos": 4,
+            "prerrequisitos": [
+                "EL2113"
+            ],
+            "correquisitos": [
+                "EL2207"
+            ],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 450, "fin": 560},
+                        {"dia": 4, "inicio": 450, "fin": 560}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "EL2207",
+            "nombre": "elementos activos",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electronica",
+            "creditos": 4,
+            "prerrequisitos": [
+                "EL2113"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 450, "fin": 560},
+                        {"dia": 1, "inicio": 450, "fin": 560}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1130},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "PI2609",
+            "nombre": "probabilidad y estadística",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
+            "creditos": 2,
+            "prerrequisitos": [
+                "MA2104"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 620}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "SO4604",
+            "nombre": "seguridad y salud ocupacional",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 3,
+            "prerrequisitos": [
+                "FI1102"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1190}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 620}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1107",
+            "nombre": "fundamentos de arquitectura de computadores",
+            "carrera": "Ingeniería en Computadores",
+            "area": "arquitectura_digital",
+            "creditos": 4,
+            "prerrequisitos": [
+                "EL2207"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE3101",
+            "nombre": "bases de datos",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1106"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1140, "fin": 1250},
+                        {"dia": 4, "inicio": 1140, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1140, "fin": 1250},
+                        {"dia": 4, "inicio": 1140, "fin": 1250}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE3201",
+            "nombre": "taller de diseño digital",
+            "carrera": "Ingeniería en Computadores",
+            "area": "arquitectura_digital",
+            "creditos": 2,
+            "prerrequisitos": [
+                "CE2201"
+            ],
+            "correquisitos": [
+                "CE1107"
+            ],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 5, "inicio": 510, "fin": 620}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 890},
+                        {"dia": 5, "inicio": 630, "fin": 740}
+                    ]
+                }
             ]
         },
         {
             "codigo": "MA2105",
             "nombre": "ecuaciones diferenciales",
-            "carrera": "Ingeniería Agrícola",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
             "creditos": 4,
             "prerrequisitos": [
                 "MA1103"
@@ -1432,179 +2146,401 @@
             ]
         },
         {
-            "codigo": "SE1200",
-            "nombre": "actividad deportiva i",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 0,
-            "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA3202",
-            "nombre": "estadística aplicada",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "PI5516",
+            "nombre": "ingeniería económica",
+            "carrera": "Ingeniería en Computadores",
+            "area": "gestion_diseno",
             "creditos": 3,
             "prerrequisitos": [
-                "MA1103"
+                "PI2609"
             ],
             "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1020, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 1020, "fin": 1250}
+                    ]
+                }
             ]
         },
         {
-            "codigo": "IA3206",
-            "nombre": "resistencia de materiales",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "IA2202"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA3208",
-            "nombre": "electricidad",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "FI1101"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA3212",
-            "nombre": "mecánica de fluidos aplicada",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "FI2103"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "MA3106",
-            "nombre": "métodos numéricos",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "CE1108",
+            "nombre": "compiladores e intérpretes",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
             "creditos": 4,
             "prerrequisitos": [
-                "MA1103"
+                "CE1107"
             ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "SE1400",
-            "nombre": "actividad cultural-deportiva",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 0,
-            "prerrequisitos": [],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": true,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "CM2103",
-            "nombre": "termodinámica",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "MA1102",
-                "QU1107"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA3105",
-            "nombre": "relación suelo-agua-planta",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "IA2106",
-                "QU1107"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA3203",
-            "nombre": "hidrología",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
-            "prerrequisitos": [
-                "IA3202"
-            ],
-            "correquisitos": [],
-            "choca_horario": false,
-            "puede_matricular": false,
-            "grupos": [
-            ]
-        },
-        {
-            "codigo": "IA3210",
-            "nombre": "laboratorio de hidráulica",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 1,
-            "prerrequisitos": [],
             "correquisitos": [
-                "IA3213"
+                "CE4301"
             ],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                }
             ]
         },
         {
-            "codigo": "IA3213",
-            "nombre": "hidráulica de canales",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
+            "codigo": "CE1109",
+            "nombre": "circuitos analógicos",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electronica",
+            "creditos": 4,
             "prerrequisitos": [
-                "IA3212"
+                "EL2207",
+                "SO4604"
             ],
             "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                }
             ]
         },
         {
-            "codigo": "IA3401",
-            "nombre": "elementos y mecanismos de máquinas agrícolas",
-            "carrera": "Ingeniería Agrícola",
+            "codigo": "CE1110",
+            "nombre": "análisis de señales mixtas",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electronica",
+            "creditos": 4,
+            "prerrequisitos": [
+                "EL2114",
+                "MA2105"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 680},
+                        {"dia": 4, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE4301",
+            "nombre": "arquitectura de computadores i",
+            "carrera": "Ingeniería en Computadores",
+            "area": "arquitectura_digital",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1107",
+                "CE3201"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CI3203",
+            "nombre": "inglés especializado para ingenierías en computadores",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
             "creditos": 2,
             "prerrequisitos": [
-                "IA3206",
-                "IA3208"
+                "CI0205"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1111",
+            "nombre": "análisis numérico para la ingeniería",
+            "carrera": "Ingeniería en Computadores",
+            "area": "ciencias_basicas",
+            "creditos": 3,
+            "prerrequisitos": [
+                "MA2105"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 570, "fin": 680},
+                        {"dia": 1, "inicio": 570, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1112",
+            "nombre": "taller de señales mixtas",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electronica",
+            "creditos": 3,
+            "prerrequisitos": [
+                "CE1109",
+                "CE1110"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 900, "fin": 1010},
+                        {"dia": 4, "inicio": 900, "fin": 1010}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1116",
+            "nombre": "diseño y calidad en productos tecnológicos",
+            "carrera": "Ingeniería en Computadores",
+            "area": "gestion_diseno",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE3101",
+                "CE4301",
+                "PI5516"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1140, "fin": 1250},
+                        {"dia": 1, "inicio": 1140, "fin": 1250}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE4302",
+            "nombre": "arquitectura de computadores II",
+            "carrera": "Ingeniería en Computadores",
+            "area": "arquitectura_digital",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE4301"
+            ],
+            "correquisitos": [
+                "CE4303"
+            ],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 780, "fin": 890},
+                        {"dia": 1, "inicio": 780, "fin": 890}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 890},
+                        {"dia": 4, "inicio": 780, "fin": 890}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE4303",
+            "nombre": "principios de sistemas operativos",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1108"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "AE4208",
+            "nombre": "desarrollo de emprendedores",
+            "carrera": "Ingeniería en Computadores",
+            "area": "gestion_diseno",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CS2101"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1020, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1020, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 680}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 450, "fin": 680}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE1113",
+            "nombre": "sistemas empotrados",
+            "carrera": "Ingeniería en Computadores",
+            "area": "arquitectura_digital",
+            "creditos": 3,
+            "prerrequisitos": [
+                "CE4303"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 900, "fin": 1010},
+                        {"dia": 1, "inicio": 900, "fin": 1010}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE5301",
+            "nombre": "redes de computadores",
+            "carrera": "Ingeniería en Computadores",
+            "area": "computacion",
+            "creditos": 4,
+            "prerrequisitos": [
+                "CE1116",
+                "CE4303"
+            ],
+            "correquisitos": [],
+            "choca_horario": true,
+            "puede_matricular": false,
+            "grupos": [
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 3, "inicio": 1020, "fin": 1130},
+                        {"dia": 1, "inicio": 1020, "fin": 1130}
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "CE5701",
+            "nombre": "electiva i",
+            "carrera": "Ingeniería en Computadores",
+            "area": "electivas",
+            "creditos": 3,
+            "prerrequisitos": [
+                "CE4302",
+                "CI3203"
             ],
             "correquisitos": [],
             "choca_horario": false,
@@ -1613,17 +2549,95 @@
             ]
         },
         {
-            "codigo": "IA5601",
-            "nombre": "protección ambiental",
-            "carrera": "Ingeniería Agrícola",
-            "creditos": 3,
+            "codigo": "CS3404",
+            "nombre": "seminario de ética para la ingeniería",
+            "carrera": "Ingeniería en Computadores",
+            "area": "formacion_general",
+            "creditos": 2,
             "prerrequisitos": [
-                "IA2106"
+                "CS2101"
             ],
             "correquisitos": [],
-            "choca_horario": false,
+            "choca_horario": true,
             "puede_matricular": false,
             "grupos": [
+                {
+                    "numero": 2,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 3,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 7,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 8,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 0, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 6,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 1080, "fin": 1250}
+                    ]
+                },
+                {
+                    "numero": 4,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 10,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 780, "fin": 950}
+                    ]
+                },
+                {
+                    "numero": 11,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 4, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 5,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 2, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 9,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                },
+                {
+                    "numero": 1,
+                    "choca_horario": true,
+                    "horarios": [
+                        {"dia": 1, "inicio": 570, "fin": 740}
+                    ]
+                }
             ]
         }
     ]

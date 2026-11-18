@@ -91,4 +91,42 @@ Con el orden acordado se reporta `balance_carreras`. Si se revisara primero el �
 
 ### 2.4. Caso límite y su solución: cursos de cero créditos
 
+Si el total de créditos de una combinación es cero, se considera que cumple el
+balance: al no haber créditos, no existe una proporción significativa que
+comparar. Las reglas por área e incompatibilidad siguen aplicándose. Si el
+total es positivo, un curso de cero créditos aporta cero al porcentaje de su
+carrera.
+
 ## 3. Representación de datos y predicados principales
+
+Las combinaciones se leen del JSON versión 2 que exporta Racket. Cada selección
+incluye código, grupo, créditos, carrera y área. Prolog representa cada curso
+como `curso(Codigo, Grupo, Creditos, Carrera, Area)` y cada combinación como
+`combinacion(Id, Cursos, CreditosTotales)`. El identificador se asigna en el
+orden en que aparecen las combinaciones en el archivo.
+
+Los porcentajes máximos y el máximo de cursos por área se consultan de los
+hechos de `politica.pl`; los valores son parámetros de política que el grupo
+puede cambiar. Con los valores iniciales de 100 % para ambas carreras, el
+balance no rechazará una combinación normal; acuerden los porcentajes finales
+antes de la entrega.
+
+`modelo:cargar_combinaciones/1` valida la versión y los campos requeridos,
+comprueba que los cursos no se repitan y verifica que los créditos totales
+coincidan con la suma de las selecciones. Si la carga falla, no reemplaza los
+hechos previamente cargados.
+
+Los predicados `politica:viola_balance/1`,
+`politica:viola_limite_area/1` y
+`politica:viola_incompatibilidad/1` reciben la lista de cursos de una
+combinación y tienen éxito si esa lista incumple la regla correspondiente.
+Balance compara créditos con una multiplicación entera equivalente al
+porcentaje, sin redondear; los límites por área cuentan cursos, no créditos.
+Los pares incompatibles se reconocen aunque los cursos aparezcan en cualquier
+orden.
+
+Las pruebas de política se ejecutan en SWI-Prolog con
+`[pruebas_politica].` y `run_tests.`. El archivo de combinaciones generado
+actualmente en `Etapa_2` es versión 1, no contiene créditos ni áreas y tiene
+bytes nulos después del JSON. Hay que regenerarlo desde el exportador
+actualizado de Racket (versión 2) antes de cargarlo en Prolog.

@@ -112,13 +112,14 @@ void load_study_plan(const char *filename, Catalog *catalog) {
             area_index = i;
         }
     }
-    if (code_index == -1 || name_index == -1 || prerequisites_index == -1 || corequisites_index == -1 || credits_index == -1 ||
-    area_index == -1) {
+    if (code_index == -1 || name_index == -1 || prerequisites_index == -1 ||
+        corequisites_index == -1 || credits_index == -1 || career_index == -1 ||
+        area_index == -1) {
         fprintf(stderr, "El archivo %s no tiene el formato esperado\n", filename);
         exit(EXIT_FAILURE);
     }
     //guardar la cantidad de columnas indicada en el encabezado 
-    int expected_cols = null_cols;
+    int expected_cols = num_cols;
 
     // Recorrer el archivo línea por línea y llenar el catálogo
     while(fgets(line, sizeof(line), study_plan) != NULL) {
